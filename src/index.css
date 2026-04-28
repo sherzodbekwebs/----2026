@@ -1,0 +1,16 @@
+@import "tailwindcss";
+
+@theme {
+  --color-kamaz-blue: #00529B;
+  --color-kamaz-dark: #1E3A5F;
+  --color-kamaz-grey: #6B7280;
+  --color-kamaz-light: #F3F4F6;
+  
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+}
+
+@layer base {
+  body {
+    @apply bg-gray-100 text-gray-900 font-sans;
+  }
+}
