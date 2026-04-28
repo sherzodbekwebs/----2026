@@ -11,7 +11,7 @@ export const CATEGORIES: Category[] = [
 export const TRAILER_DATA: TrailerSpec[] = [
   {
     id: 1,
-    foto: '/public/uat3os.png',
+    foto: '/uat3os.png',
     brand: 'VOLLKRAFT (UAT)',
     type: '3 осный',
     priceSum: '504 000 000 сум',
@@ -32,7 +32,7 @@ export const TRAILER_DATA: TrailerSpec[] = [
   },
   {
     id: 2,
-    foto: '/public/tonar3.png',
+    foto: '/tonar3.png',
     brand: 'TONAR',
     type: '3 осный',
     priceSum: '534 789 519 сум',
@@ -53,7 +53,7 @@ export const TRAILER_DATA: TrailerSpec[] = [
   },
   {
     id: 3,
-    foto: '/public/bonum3.png',
+    foto: '/bonum3.png',
     brand: 'BONUM',
     type: '3 осный',
     priceSum: '608 000 000 сум',
@@ -74,7 +74,7 @@ export const TRAILER_DATA: TrailerSpec[] = [
   },
   {
     id: 4,
-    foto: '/public/krone3.png',
+    foto: '/krone3.png',
     brand: 'KRONE',
     type: '3 осный',
     priceSum: '672 000 000 сум',
@@ -95,7 +95,7 @@ export const TRAILER_DATA: TrailerSpec[] = [
   },
   {
     id: 5,
-    foto: '/public/orthaus3.png',
+    foto: '/orthaus3.png',
     brand: 'ORTHAUS',
     type: '3 осный',
     priceSum: '656 000 000 сум',
@@ -116,7 +116,7 @@ export const TRAILER_DATA: TrailerSpec[] = [
   },
   {
     id: 6,
-    foto: '/public/koluman3.png',
+    foto: '/koluman3.png',
     brand: 'KOLUMAN',
     type: '3 осный',
     priceSum: '684 000 000 сум',
@@ -137,7 +137,7 @@ export const TRAILER_DATA: TrailerSpec[] = [
   },
   {
     id: 7,
-    foto: '/public/grunwald3.png',
+    foto: '/grunwald3.png',
     brand: 'GRUNWALD',
     type: '3 осный',
     priceSum: '624 000 000 сум',
@@ -158,7 +158,7 @@ export const TRAILER_DATA: TrailerSpec[] = [
   },
   {
     id: 8,
-    foto: '/public/wegner3.png',
+    foto: '/wegner3.png',
     brand: 'Wagnermaier',
     type: '3 осный',
     priceSum: '735 746 338 сум',
@@ -179,7 +179,7 @@ export const TRAILER_DATA: TrailerSpec[] = [
   },
   {
     id: 9,
-    foto: '/public/kaes3.png',
+    foto: '/kaes3.png',
     brand: 'KAESSBOHRER (ISOPAKCS)',
     type: '3 осный',
     priceSum: null,
@@ -200,7 +200,7 @@ export const TRAILER_DATA: TrailerSpec[] = [
   },
   {
     id: 10,
-    foto: '/public/cimc3.png',
+    foto: '/cimc3.png',
     brand: 'CIMC',
     type: '3 осный',
     priceSum: null,
@@ -221,7 +221,7 @@ export const TRAILER_DATA: TrailerSpec[] = [
   },
   {
     id: 11,
-    foto: '/public/kaile3.png',
+    foto: '/kaile3.png',
     brand: 'KAILE',
     type: '3 осный',
     priceSum: '1 168 000 000 сум',
@@ -243,7 +243,7 @@ export const TRAILER_DATA: TrailerSpec[] = [
 
   {
     id: 13,
-    foto: '/public/gutrailer3.png',
+    foto: '/gutrailer3.png',
     brand: 'GUT TRAILER',
     type: '3 осный',
     priceSum: '932 800 000 сум',
@@ -264,7 +264,7 @@ export const TRAILER_DATA: TrailerSpec[] = [
   },
   {
     id: 1,
-    foto: '/public/uat4.png',
+    foto: '/uat4.png',
     brand: 'VOLLKRAFT (UAT)',
     type: '4 осный',
     priceSum: '672 000 000 сум',
@@ -285,7 +285,7 @@ export const TRAILER_DATA: TrailerSpec[] = [
   },
   {
     id: 2,
-    foto: '/public/tonar4.png',
+    foto: '/tonar4.png',
     brand: 'TONAR',
     type: '4 осный',
     priceSum: '',
@@ -306,7 +306,7 @@ export const TRAILER_DATA: TrailerSpec[] = [
   },
   {
     id: 3,
-    foto: '/public/bonum4.png',
+    foto: '/bonum4.png',
     brand: 'BONUM',
     type: '4 осный',
     priceSum: '',
@@ -327,7 +327,7 @@ export const TRAILER_DATA: TrailerSpec[] = [
   },
   {
     id: 4,
-    foto: '/public/krone4.png',
+    foto: '/krone4.png',
     brand: 'KRONE',
     type: '4 осный',
     priceSum: '',
@@ -348,7 +348,7 @@ export const TRAILER_DATA: TrailerSpec[] = [
   },
   {
     id: 5,
-    foto: '/public/orhaus4.png',
+    foto: '/orhaus4.png',
     brand: 'ORTHAUS',
     type: '4 осный',
     priceSum: '',
@@ -369,7 +369,7 @@ export const TRAILER_DATA: TrailerSpec[] = [
   },
   {
     id: 6,
-    foto: '/public/koluman4.png',
+    foto: '/koluman4.png',
     brand: 'KOLUMAN',
     type: '4 осный',
     priceSum: '',
@@ -390,7 +390,7 @@ export const TRAILER_DATA: TrailerSpec[] = [
   },
   {
     id: 7,
-    foto: '/public/grunwald4.png',
+    foto: '/grunwald4.png',
     brand: 'GRUNWALD',
     type: '4 осный',
     priceSum: '',
@@ -411,7 +411,7 @@ export const TRAILER_DATA: TrailerSpec[] = [
   },
   {
     id: 8,
-    foto: '/public/wagner4.png',
+    foto: '/wagner4.png',
     brand: 'Wagnermaier',
     type: '4 осный',
     priceSum: '',
@@ -432,7 +432,7 @@ export const TRAILER_DATA: TrailerSpec[] = [
   },
   {
     id: 9,
-    foto: '/public/sotrans4.png',
+    foto: '/sotrans4.png',
     brand: 'SOTRANS',
     type: '4 осный',
     priceSum: '',
@@ -453,7 +453,7 @@ export const TRAILER_DATA: TrailerSpec[] = [
   },
   {
     id: 10,
-    foto: '/public/fliegl4.png',
+    foto: '/fliegl4.png',
     brand: 'FLIEGL',
     type: '4 осный',
     priceSum: '',
@@ -474,7 +474,7 @@ export const TRAILER_DATA: TrailerSpec[] = [
   },
   {
     id: 11,
-    foto: '/public/cimc4.png',
+    foto: '/cimc4.png',
     brand: 'CIMC',
     type: '4 осный',
     priceSum: '',
@@ -495,7 +495,7 @@ export const TRAILER_DATA: TrailerSpec[] = [
   },
   {
     id: 12,
-    foto: '/public/kaile4.png',
+    foto: '/kaile4.png',
     brand: 'KAILE',
     type: '4 осный',
     priceSum: '',
@@ -516,7 +516,7 @@ export const TRAILER_DATA: TrailerSpec[] = [
   },
   {
     id: 13,
-    foto: '/public/guttrailer4.png',
+    foto: '/guttrailer4.png',
     brand: 'GUT TRAILER',
     type: '4 осный',
     priceSum: '',
@@ -537,7 +537,7 @@ export const TRAILER_DATA: TrailerSpec[] = [
   },
   {
     id: 1,
-    foto: '/public/kuat3.png',
+    foto: '/kuat3.png',
     brand: 'VOLLKRAFT (UAT)',
     type: '3 осная',
     priceSum: '352 800 000',
@@ -558,7 +558,7 @@ export const TRAILER_DATA: TrailerSpec[] = [
   },
   {
     id: 2,
-    foto: '/public/ktonar3.png',
+    foto: '/ktonar3.png',
     brand: 'TONAR',
     type: '3 осная',
     priceSum: '',
@@ -579,7 +579,7 @@ export const TRAILER_DATA: TrailerSpec[] = [
   },
   {
     id: 4,
-    foto: '/public/kkrone3.png',
+    foto: '/kkrone3.png',
     brand: 'KRONE',
     type: '3 осная',
     priceSum: '',
@@ -600,7 +600,7 @@ export const TRAILER_DATA: TrailerSpec[] = [
   },
   {
     id: 5,
-    foto: '/public/korthaus3.png',
+    foto: '/korthaus3.png',
     brand: 'ORTHAUS',
     type: '3 осная',
     priceSum: '',
@@ -621,7 +621,7 @@ export const TRAILER_DATA: TrailerSpec[] = [
   },
   {
     id: 6,
-    foto: '/public/kgrunwald3.png',
+    foto: '/kgrunwald3.png',
     brand: 'GRUNWALD',
     type: '3 осная',
     priceSum: '547 536 915',
@@ -642,7 +642,7 @@ export const TRAILER_DATA: TrailerSpec[] = [
   },
   {
     id: 7,
-    foto: '/public/kfliegl3.png',
+    foto: '/kfliegl3.png',
     brand: 'FLIEGL',
     type: '3 осная',
     priceSum: '',
@@ -663,7 +663,7 @@ export const TRAILER_DATA: TrailerSpec[] = [
   },
   {
     id: 8,
-    foto: '/public/kcimc3.png',
+    foto: '/kcimc3.png',
     brand: 'CIMC',
     type: '3 осная',
     priceSum: '',
@@ -684,7 +684,7 @@ export const TRAILER_DATA: TrailerSpec[] = [
   },
   {
     id: 9,
-    foto: '/public/kgut-trailer3.png',
+    foto: '/kgut-trailer3.png',
     brand: 'GUT TRAILER',
     type: '3 осная',
     priceSum: '',
@@ -708,7 +708,7 @@ export const TRAILER_DATA: TrailerSpec[] = [
 
   {
     id: 1,
-    foto: '/public/kuat4.png',
+    foto: '/kuat4.png',
     brand: 'VOLLKRAFT (UAT)',
     type: '4 осная',
     priceSum: '425 600 000',
@@ -730,7 +730,7 @@ export const TRAILER_DATA: TrailerSpec[] = [
 
   {
     id: 2,
-    foto: '/public/ktonar4.png',
+    foto: '/ktonar4.png',
     brand: 'TONAR',
     type: '4 осная',
     priceSum: '',
@@ -752,7 +752,7 @@ export const TRAILER_DATA: TrailerSpec[] = [
 
   {
     id: 3,
-    foto: '/public/kbonum4.png',
+    foto: '/kbonum4.png',
     brand: 'BONUM',
     type: '4 осная',
     priceSum: '',
@@ -774,7 +774,7 @@ export const TRAILER_DATA: TrailerSpec[] = [
 
   // {
   //   id: 4,
-  //   foto: '/public/krone.png',
+  //   foto: '/krone.png',
   //   brand: 'KRONE',
   //   type: '4 осная',
   //   priceSum: '',
@@ -796,7 +796,7 @@ export const TRAILER_DATA: TrailerSpec[] = [
 
   {
     id: 5,
-    foto: '/public/korthaus4.png',
+    foto: '/korthaus4.png',
     brand: 'ORTHAUS',
     type: '4 осная',
     priceSum: '745 573 600',
@@ -818,7 +818,7 @@ export const TRAILER_DATA: TrailerSpec[] = [
 
   {
     id: 6,
-    foto: '/public/kkoluman4.png',
+    foto: '/kkoluman4.png',
     brand: 'KOLUMAN',
     type: '4 осная',
     priceSum: '777 989 843',
@@ -840,7 +840,7 @@ export const TRAILER_DATA: TrailerSpec[] = [
 
   {
     id: 7,
-    foto: '/public/kgrunwald4.png',
+    foto: '/kgrunwald4.png',
     brand: 'GRUNWALD',
     type: '4 осная',
     priceSum: '618 826 088',
@@ -862,7 +862,7 @@ export const TRAILER_DATA: TrailerSpec[] = [
 
   // {
   //   id: 8,
-  //   foto: '/public/wagnermaier.png',
+  //   foto: '/wagnermaier.png',
   //   brand: 'Wagnermaier',
   //   type: '4 осная',
   //   priceSum: null,
@@ -884,7 +884,7 @@ export const TRAILER_DATA: TrailerSpec[] = [
 
   {
     id: 9,
-    foto: '/public/ksotrans4.png',
+    foto: '/ksotrans4.png',
     brand: 'SOTRANS',
     type: '4 осная',
     priceSum: '',
@@ -906,7 +906,7 @@ export const TRAILER_DATA: TrailerSpec[] = [
 
   {
     id: 11,
-    foto: '/public/kcmc4.png',
+    foto: '/kcmc4.png',
     brand: 'CIMC',
     type: '4 осная',
     priceSum: '',
@@ -928,7 +928,7 @@ export const TRAILER_DATA: TrailerSpec[] = [
 
   {
     id: 13,
-    foto: '/public/kguttrailer4.png',
+    foto: '/kguttrailer4.png',
     brand: 'GUT TRAILER',
     type: '4 осная',
     priceSum: '',
