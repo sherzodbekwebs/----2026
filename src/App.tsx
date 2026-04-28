@@ -34,9 +34,9 @@ export default function App() {
               </h2>
             </div>
             {/* text-4xl dan text-7xl gacha o'zgaradi */}
-            <h3 className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-black text-[#1E3A5F] uppercase tracking-tighter leading-[0.9] mb-6">
+            <h3 className="text-3xl sm:text-3xl md:text-4xl lg:text-4xl font-black text-[#1E3A5F] uppercase tracking-tighter leading-[0.9] mb-6">
               Анализ <br className="sm:hidden" />
-              <span className="">Рынка 2026.</span>
+              <span className="">Рынка 2026</span>
             </h3>
           </FadeIn>
 

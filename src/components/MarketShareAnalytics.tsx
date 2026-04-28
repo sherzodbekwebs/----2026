@@ -1,20 +1,23 @@
-import React from 'react';
-import { PieChart, Pie, Cell, ResponsiveContainer, Tooltip } from 'recharts';
+import React, { useState, useMemo } from 'react';
+import { PieChart, Pie, Cell, ResponsiveContainer } from 'recharts';
 import { MarketShareData } from '../types';
 import { FadeIn } from './FadeIn';
-import { TrendingUp, TrendingDown, Minus, Wallet, ShoppingCart, BarChart3, Users, ArrowUpRight, ArrowDownRight } from 'lucide-react';
+import {
+  TrendingUp, TrendingDown, Minus, ShoppingCart, BarChart3, Users,
+  ArrowUpRight, ArrowDownRight, ArrowUpDown, ChevronUp, ChevronDown, BarChart2
+} from 'lucide-react';
 
 interface MarketShareAnalyticsProps {
   data2025: MarketShareData;
   data2026: MarketShareData;
 }
 
-const SmallDonut = ({ data, year }: { data: MarketShareData, year: string }) => (
-  <div className="flex flex-col items-center w-full py-4 border-b border-slate-50 last:border-0">
-    <p className="text-[15px] font-black text-slate-700 uppercase tracking-widest mb-2">{year} (Янв-Март)</p>
-    <div className="h-[180px] w-full relative">
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-center pointer-events-none">
-        <p className="text-xl font-black text-[#1E3A5F]">{data.total.toLocaleString()}</p>
+const CompactDonut = ({ data, year }: { data: MarketShareData, year: string }) => (
+  <div className="flex flex-col items-center w-full py-2 relative z-10">
+    <p className="text-[15px] font-black text-[#1E3A5F]  tracking-widest mb-1">{year} (янв-март)</p>
+    <div className="h-[210px] w-full relative">
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-center pointer-events-none z-20 bg-white/40 px-2 py-1 rounded-full backdrop-blur-[2px]">
+        <p className="text-2xl font-black text-[#1E3A5F] leading-none">{data.total.toLocaleString()}</p>
         <p className="text-[8px] font-bold text-slate-500 uppercase">ед.</p>
       </div>
       <ResponsiveContainer width="100%" height="100%">
@@ -23,8 +26,8 @@ const SmallDonut = ({ data, year }: { data: MarketShareData, year: string }) => 
             data={data.records}
             cx="50%"
             cy="50%"
-            innerRadius="65%"
-            outerRadius="95%"
+            innerRadius={75}
+            outerRadius={100}
             paddingAngle={2}
             dataKey="count"
           >
@@ -38,109 +41,161 @@ const SmallDonut = ({ data, year }: { data: MarketShareData, year: string }) => 
   </div>
 );
 
-const MetricCard = ({ label, v1, v2, trend, icon }: any) => (
-  <div className="bg-white/5 border border-white/10 rounded-3xl p-6 hover:bg-white/[0.07] transition-all group flex flex-col items-center">
-    <div className="flex justify-between items-start mb-4 w-full">
-      <div className="p-3 bg-blue-500/10 rounded-2xl text-blue-400 group-hover:scale-110 transition-transform">
-        {icon}
-      </div>
-      {trend === 'up' && <TrendingUp className="w-5 h-5 text-emerald-400" />}
-      {trend === 'down' && <TrendingDown className="w-5 h-5 text-rose-400" />}
-      {trend === 'neutral' && <Minus className="w-5 h-5 text-slate-400" />}
-    </div>
-    <h5 className="text-[12px] md:text-[14px] font-black text-blue-300 uppercase tracking-widest mb-5 text-center w-full leading-tight min-h-[35px] flex items-center justify-center">
-      {label}
-    </h5>
-    <div className="flex items-end justify-between w-full border-t border-white/5 pt-4">
-      <div>
-        <p className="text-[10px] font-bold text-slate-400 uppercase leading-none mb-1">2025</p>
-        <p className="text-xl font-black text-slate-300 tracking-tighter">{v1}</p>
-      </div>
-      <div className="text-right">
-        <p className="text-[10px] font-bold text-blue-400 uppercase leading-none mb-1">2026</p>
-        <p className="text-3xl font-black text-white tracking-tighter">{v2}</p>
-      </div>
-    </div>
-  </div>
-);
-
 export const MarketShareAnalytics = ({ data2025, data2026 }: MarketShareAnalyticsProps) => {
-  
-  // Ma'lumotlarni birlashtirish: Ikkala yildagi barcha brendlarni yig'ish
-  const allBrands = Array.from(new Set([
-    ...data2025.records.map(r => r.brand),
-    ...data2026.records.map(r => r.brand)
-  ]));
+  const [sortConfig, setSortConfig] = useState<{ key: string, direction: 'asc' | 'desc' }>({
+    key: 'c26',
+    direction: 'desc'
+  });
 
-  const tableData = allBrands.map(brand => {
-    const r25 = data2025.records.find(r => r.brand === brand);
-    const r26 = data2026.records.find(r => r.brand === brand);
-    
-    const p25 = r25?.percentage || 0;
-    const p26 = r26?.percentage || 0;
-    const diff = p26 - p25;
+  const allBrandsData = useMemo(() => {
+    const brands = Array.from(new Set([...data2025.records.map(r => r.brand), ...data2026.records.map(r => r.brand)]));
+    let items = brands.map(brand => {
+      const r25 = data2025.records.find(r => r.brand === brand);
+      const r26 = data2026.records.find(r => r.brand === brand);
+      const c25 = r25?.count || 0;
+      const c26 = r26?.count || 0;
+      const p25 = r25?.percentage || 0;
+      const p26 = r26?.percentage || 0;
+      return {
+        brand,
+        color: r26?.color || r25?.color || '#cbd5e1',
+        c25, p25, c26, p26,
+        countDiff: c26 - c25,
+        percentDiff: p26 - p25
+      };
+    });
 
-    return {
-      brand,
-      color: r26?.color || r25?.color || '#cbd5e1',
-      c25: r25?.count || 0,
-      p25: p25,
-      c26: r26?.count || 0,
-      p26: p26,
-      diff: diff
-    };
-  }).sort((a, b) => b.c26 - a.c26); // 2026-yilgi soni bo'yicha saralash
+    items.sort((a: any, b: any) => {
+      if (a[sortConfig.key] < b[sortConfig.key]) return sortConfig.direction === 'asc' ? -1 : 1;
+      if (a[sortConfig.key] > b[sortConfig.key]) return sortConfig.direction === 'asc' ? 1 : -1;
+      return 0;
+    });
+
+    return items;
+  }, [data2025, data2026, sortConfig]);
+
+  const globalTotalDiff = data2026.total - data2025.total;
+  const globalPercentDiff = ((data2026.total - data2025.total) / data2025.total) * 100;
+
+  const requestSort = (key: string) => {
+    let direction: 'asc' | 'desc' = 'desc';
+    if (sortConfig.key === key && sortConfig.direction === 'desc') direction = 'asc';
+    setSortConfig({ key, direction });
+  };
+
+  const SortIcon = ({ column }: { column: string }) => {
+    if (sortConfig.key !== column) return <ArrowUpDown size={12} className="opacity-30" />;
+    return sortConfig.direction === 'desc' ? <ChevronDown size={14} className="text-[#00529B]" /> : <ChevronUp size={14} className="text-[#00529B]" />;
+  };
 
   return (
     <div className="mb-12">
-
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 mb-8">
-        {/* CHAP TOMON: Donutlar */}
-        <div className="lg:col-span-4">
-          <div className="h-full bg-white rounded-[10px] border border-slate-100 shadow-sm p-6 flex flex-col justify-around">
-            <SmallDonut data={data2025} year="2025" />
-            <SmallDonut data={data2026} year="2026" />
+
+        {/* CHAP TOMON */}
+        <div className="lg:col-span-4 relative">
+          <div className="h-full bg-white rounded-[10px] border border-slate-100 shadow-sm p-4 flex flex-col items-center justify-center gap-6 relative overflow-hidden">
+            <div className="absolute left-1/2 top-[140px] bottom-[140px] w-px border-l-2 border-dashed border-slate-300 -translate-x-1/2 z-0 hidden sm:block" />
+            <CompactDonut data={data2026} year="2026" />
+            <div className="flex justify-center relative z-20 h-0 w-full">
+              <div className="absolute left-1/2 flex items-center -translate-y-1/2 translate-x-12">
+                <div className="w-12 h-px bg-slate-300" />
+                <div className={`px-4 py-2 rounded-2xl border-2 shadow-md bg-white flex flex-col items-center gap-0.5 min-w-[150px] ${globalTotalDiff < 0 ? 'border-rose-100' : 'border-emerald-100'}`}>
+                  <div className="flex items-center gap-2">
+                    {globalTotalDiff < 0 ? <TrendingDown size={16} className="text-rose-500" /> : <TrendingUp size={14} className="text-emerald-500" />}
+                    <span className={`text-[15px] font-black ${globalTotalDiff < 0 ? 'text-rose-500' : 'text-emerald-500'}`}>{globalTotalDiff.toLocaleString()} ед.</span>
+                  </div>
+                  <span className="text-[11px] font-bold text-slate-500 uppercase tracking-tighter">{globalPercentDiff.toFixed(1)}%</span>
+                </div>
+              </div>
+            </div>
+            <CompactDonut data={data2025} year="2025" />
           </div>
         </div>
 
-        {/* O'NG TOMON: To'liq Jadval (Barcha brendlar bilan) */}
+        {/* O'NG TOMON: JADVAL */}
         <div className="lg:col-span-8">
           <div className="bg-white rounded-[10px] border border-slate-100 shadow-sm overflow-hidden h-full">
-            <div className="overflow-x-auto max-h-[600px] scrollbar-thin">
+            <div className="overflow-x-auto max-h-[650px] scrollbar-thin">
               <table className="w-full text-left border-separate border-spacing-0">
-                <thead className="sticky top-0 z-10">
-                  <tr className="bg-slate-50">
-                    <th className="p-5 text-[11px] font-black text-slate-500 uppercase border-b border-r border-slate-100">Марка</th>
-                    <th className="p-5 text-[11px] font-black text-slate-500 uppercase border-b border-r border-slate-100 text-center">2025 (Янв-Март)</th>
-                    <th className="p-5 text-[11px] font-black text-slate-500 uppercase border-b border-r border-slate-100 text-center">2026 (Янв-Март)</th>
-                    <th className="p-5 text-[11px] font-black text-slate-500 uppercase border-b text-center">Динамика</th>
+                <thead className="sticky top-0 z-10 bg-slate-50">
+                  <tr className="select-none">
+                    <th onClick={() => requestSort('brand')} className="cursor-pointer p-5 text-[11px] font-black text-slate-500 uppercase border-b border-r border-slate-100">
+                      <div className="flex items-center gap-2">Марка <SortIcon column="brand" /></div>
+                    </th>
+                    <th onClick={() => requestSort('c26')} className="cursor-pointer p-5 text-[11px] font-black text-slate-500  border-b border-r border-slate-100 text-center">
+                      <div className="flex items-center justify-center gap-2">2026 (янв-март) <SortIcon column="c26" /></div>
+                    </th>
+                    <th onClick={() => requestSort('c25')} className="cursor-pointer p-5 text-[11px] font-black text-slate-500  border-b border-r border-slate-100 text-center">
+                      <div className="flex items-center justify-center gap-2">2025 (янв-март) <SortIcon column="c25" /></div>
+                    </th>
+                    <th onClick={() => requestSort('countDiff')} className="cursor-pointer p-5 text-[11px] font-black text-slate-500 uppercase border-b text-center">
+                      <div className="flex items-center justify-center gap-2">Динамика <SortIcon column="countDiff" /></div>
+                    </th>
                   </tr>
                 </thead>
                 <tbody className="divide-y divide-slate-50">
-                  {tableData.map((row, idx) => (
-                    <tr key={idx} className="hover:bg-slate-50/50 transition-colors">
+
+                  {/* --- 1. ВСЕГО РЫНОК (JAMI BOZOR QATORI) --- */}
+                  <tr className="bg-slate-100/50 font-black">
+                    <td className="p-4 border-r border-slate-200">
+                      <div className="flex items-center gap-3">
+                        <div className="w-4 h-4 bg-[#1E3A5F] rounded flex items-center justify-center text-white">
+                          <BarChart2 size={10} />
+                        </div>
+                        <span className="text-sm font-black text-[#1E3A5F] uppercase">ИТОГО РЫНОК</span>
+                      </div>
+                    </td>
+                    <td className="p-4 text-center border-r border-slate-200 text-[#00529B]">
+                      <div className="flex items-center justify-center gap-2">
+                        <span className="text-sm">{data2026.total.toLocaleString()} ед.</span>
+                        <span className="text-xs opacity-60">(100%)</span>
+                      </div>
+                    </td>
+                    <td className="p-4 text-center border-r border-slate-200 text-slate-700">
+                      <div className="flex items-center justify-center gap-2">
+                        <span className="text-sm">{data2025.total.toLocaleString()} ед.</span>
+                        <span className="text-xs opacity-60">(100%)</span>
+                      </div>
+                    </td>
+                    <td className="p-4 text-center">
+                      <div className={`flex items-center justify-center gap-1 text-sm ${globalTotalDiff < 0 ? 'text-rose-600' : 'text-emerald-600'}`}>
+                        {globalTotalDiff < 0 ? <TrendingDown size={16} /> : <TrendingUp size={16} />}
+                        <span>{globalTotalDiff.toLocaleString()} ед. ({globalPercentDiff.toFixed(1)}%)</span>
+                      </div>
+                    </td>
+                  </tr>
+
+                  {/* --- 2. BRENDLAR RO'YXATI --- */}
+                  {allBrandsData.map((row, idx) => (
+                    <tr key={idx} className="hover:bg-slate-50/50 transition-colors group">
                       <td className="p-4 border-r border-slate-50">
                         <div className="flex items-center gap-3">
-                          <div className="w-3 h-3 rounded-full shrink-0 shadow-sm" style={{ backgroundColor: row.color }} />
+                          <div className="w-3.5 h-3.5 rounded-full shrink-0 shadow-sm" style={{ backgroundColor: row.color }} />
                           <span className="text-sm font-black text-[#1E3A5F] uppercase">{row.brand}</span>
                         </div>
                       </td>
-                      <td className="p-4 text-center border-r border-slate-50">
-                        <div className="flex items-center justify-center gap-2">
-                          <span className="text-sm font-black text-slate-700">{row.c25.toLocaleString()} ед.</span>
-                          <span className="text-xs font-bold text-slate-500">({row.p25}%)</span>
+                      <td className="p-4 text-center border-r border-slate-50 bg-blue-50/5 text-[#00529B]">
+                        <div className="flex items-center justify-center gap-2 font-black">
+                          <span className="text-sm">{row.c26.toLocaleString()}</span>
+                          <span className="text-xs opacity-60">({row.p26}%)</span>
                         </div>
                       </td>
-                      <td className="p-4 text-center border-r border-slate-50 bg-blue-50/5">
+                      <td className="p-4 text-center border-r border-slate-50 text-slate-700 font-bold">
                         <div className="flex items-center justify-center gap-2">
-                          <span className="text-sm font-black text-[#00529B]">{row.c26.toLocaleString()} ед.</span>
-                          <span className="text-sm font-black text-[#00529B]">({row.p26}%)</span>
+                          <span className="text-sm">{row.c25.toLocaleString()}</span>
+                          <span className="text-xs opacity-60">({row.p25}%)</span>
                         </div>
                       </td>
-                      <td className="p-4 text-center">
-                        <div className={`flex items-center justify-center gap-1 font-black text-xs ${row.diff > 0 ? 'text-emerald-500' : row.diff < 0 ? 'text-rose-500' : 'text-slate-400'}`}>
-                          {row.diff > 0 ? <ArrowUpRight size={14}/> : row.diff < 0 ? <ArrowDownRight size={14}/> : <Minus size={14}/>}
-                          {Math.abs(row.diff).toFixed(1)}%
+                      <td className="p-4 text-center font-black text-xs">
+                        <div className="flex items-center justify-center gap-2 whitespace-nowrap">
+                          <div className={`flex items-center gap-1 ${row.countDiff > 0 ? 'text-emerald-500' : row.countDiff < 0 ? 'text-rose-500' : 'text-slate-400'}`}>
+                            {row.countDiff > 0 ? <ArrowUpRight size={14} /> : row.countDiff < 0 ? <ArrowDownRight size={14} /> : <Minus size={14} />}
+                            <span>{row.countDiff > 0 ? `+${row.countDiff}` : row.countDiff} ед.</span>
+                          </div>
+                          <span className={`text-[10px] ${row.percentDiff > 0 ? 'text-emerald-500' : row.percentDiff < 0 ? 'text-rose-500' : 'text-slate-400'}`}>
+                            ({row.percentDiff > 0 ? `+${row.percentDiff.toFixed(1)}` : row.percentDiff.toFixed(1)}%)
+                          </span>
                         </div>
                       </td>
                     </tr>
@@ -151,31 +206,6 @@ export const MarketShareAnalytics = ({ data2025, data2026 }: MarketShareAnalytic
           </div>
         </div>
       </div>
-
-      {/* METRIC SECTION (O'zgarishsiz dizayn) */}
-      <FadeIn delay={0.3}>
-        <div className="bg-[#1E3A5F] p-8 md:p-10 rounded-[10px] text-white shadow-2xl relative overflow-hidden">
-          <div className="absolute top-0 right-0 w-96 h-96 bg-blue-500/10 rounded-full -translate-y-1/2 translate-x-1/2 blur-[100px]" />
-          <div className="relative z-10">
-            <div className="flex flex-col lg:flex-row justify-between items-start lg:items-end mb-10 gap-4">
-              <div>
-                <h4 className="text-4xl font-black uppercase tracking-tighter ">Динамика Рынка</h4>
-                <p className="text-blue-300 text-[10px] font-bold uppercase tracking-[0.3em] mt-2">Аналитический отчет по ключевым метрикам</p>
-              </div>
-              <div className="px-5 py-2 bg-white/5 rounded-full border border-white/10 text-[10px] font-black uppercase tracking-widest text-blue-200">
-                Сравнение Q1 2025 / Q1 2026
-              </div>
-            </div>
-            
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-               <MetricCard label="Общий объем рынка" v1="1 632" v2="1 068" trend="down" icon={<ShoppingCart className="w-5 h-5" />} />
-               <MetricCard label="Доля Лидера (Max)" v1="27%" v2="18%" trend="down" icon={<Users className="w-5 h-5" />} />
-               <MetricCard label="Экспансия BONUM" v1="4.0%" v2="18.0%" trend="up" icon={<BarChart3 className="w-5 h-5" />} />
-               <MetricCard label="Стабильность КАМАЗ" v1="16.0%" v2="15.0%" trend="neutral" icon={<Wallet className="w-5 h-5" />} />
-            </div>
-          </div>
-        </div>
-      </FadeIn>
     </div>
   );
 };
