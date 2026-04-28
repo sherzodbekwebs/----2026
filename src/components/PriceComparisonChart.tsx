@@ -3,18 +3,18 @@ import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContaine
 import { CircleDollarSign } from 'lucide-react';
 import { TrailerSpec } from '../types';
 
-// Rasmlar xaritasi (Kategoriya ID-si va unga mos rasm)
+// Rasmlar xaritasi
 const categoryImages: Record<string, string> = {
-  'curtain-3': '/uat3os.png',        // Shtorniy 3-osli
-  'curtain-4': '/uat4.png',        // Shtorniy 4-osli
-  'container-3': '/kuat3.png',  // Konteynerovoz rasm manzili
-  'container-4': '/kuat4.png',  // Konteynerovoz 4-osli rasm manzili
-  'reefer-3': '/ref.png',     // Ref rasm manzili
+  'curtain-3': '/uat3os.png',
+  'curtain-4': '/uat4.png',
+  'container-3': '/kuat3.png',
+  'container-4': '/kuat4.png',
+  'reefer-3': '/ref.png',
 };
 
 interface PriceComparisonChartProps {
   data: TrailerSpec[];
-  activeCategory: string; // Yangi prop
+  activeCategory: string;
 }
 
 export const PriceComparisonChart = ({ data, activeCategory }: PriceComparisonChartProps) => {
@@ -37,39 +37,41 @@ export const PriceComparisonChart = ({ data, activeCategory }: PriceComparisonCh
     })).sort((a, b) => b.price - a.price);
 
   return (
-    <div className="bg-white p-5 md:p-10 rounded-[10px] border border-slate-100 shadow-sm mb-8 md:mb-12">
-      <div className="flex items-center justify-between mb-8 md:mb-6">
-        <div className="flex items-center gap-3 md:gap-4">
-          <div className="w-10 h-10 md:w-12 md:h-12 bg-emerald-50 rounded-xl md:rounded-2xl flex items-center justify-center shadow-inner shrink-0">
-            <CircleDollarSign className="w-5 h-5 md:w-6 md:h-6 text-emerald-500" />
+    <div className="bg-white p-6 md:p-10 rounded-[20px] border border-slate-100 shadow-sm mb-8 md:mb-12">
+      <div className="flex items-center justify-between mb-10 md:mb-14">
+        <div className="flex items-center gap-4">
+          <div className="w-12 h-12 md:w-14 md:h-14 bg-emerald-50 rounded-2xl flex items-center justify-center shadow-inner shrink-0">
+            <CircleDollarSign className="w-6 h-6 md:w-7 md:h-7 text-emerald-500" />
           </div>
           <div>
-            <h4 className="text-base md:text-xl font-black text-[#1E3A5F] uppercase tracking-tighter leading-none mb-1">
+            <h4 className="text-lg md:text-2xl font-black text-[#1E3A5F] uppercase tracking-tighter leading-none mb-1">
               Сравнение цен
             </h4>
-            <p className="text-[9px] md:text-xs font-bold text-slate-400 uppercase tracking-widest">
+            <p className="text-[10px] md:text-xs font-bold text-slate-400 uppercase tracking-[0.2em]">
               USD (Текущая стоимость)
             </p>
           </div>
         </div>
 
-        {/* DINAMIK RASM SHU YERDA */}
-        <img
-          className="w-32 md:w-52 h-auto object-contain transition-all duration-500"
-          src={categoryImages[activeCategory] || '/uat3os.png'} // Agar topilmasa default rasm
-          alt="Trailer Type"
-        />
+        {/* DINAMIK RASM */}
+        <div className="relative">
+          <img
+            className="w-36 md:w-64 h-auto object-contain transition-all duration-700 ease-in-out hover:scale-105 drop-shadow-2xl"
+            src={categoryImages[activeCategory] || '/uat3os.png'}
+            alt="Trailer Type"
+          />
+        </div>
       </div>
 
-      <div className="h-[300px] md:h-[400px] w-full">
+      <div className="h-[350px] md:h-[450px] w-full">
         <ResponsiveContainer width="100%" height="100%">
           <BarChart
             data={chartData}
             margin={{
-              top: 30,
+              top: 40,
               right: 10,
-              left: isMobile ? -20 : 0,
-              bottom: isMobile ? 60 : 80
+              left: isMobile ? -10 : 20,
+              bottom: isMobile ? 70 : 90
             }}
           >
             <defs>
@@ -78,7 +80,8 @@ export const PriceComparisonChart = ({ data, activeCategory }: PriceComparisonCh
                 <stop offset="100%" stopColor="#1E3A5F" stopOpacity={1} />
               </linearGradient>
             </defs>
-            <CartesianGrid strokeDasharray="3 3" vertical={false} stroke="#F1F5F9" />
+            <CartesianGrid strokeDasharray="4 4" vertical={false} stroke="#F1F5F9" />
+            
             <XAxis
               dataKey="name"
               axisLine={false}
@@ -86,39 +89,45 @@ export const PriceComparisonChart = ({ data, activeCategory }: PriceComparisonCh
               interval={0}
               angle={-45}
               textAnchor="end"
-              tick={{ fill: '#475569', fontSize: isMobile ? 10 : 12, fontWeight: 800 }}
+              tick={{ fill: '#475569', fontSize: isMobile ? 10 : 13, fontStyle: 'italic', fontWeight: 900 }}
             />
+            
             <YAxis
               axisLine={false}
               tickLine={false}
+              // "k" olib tashlandi, to'liq formatlandi
               tick={{ fill: '#94A3B8', fontSize: isMobile ? 9 : 12, fontWeight: 700 }}
-              tickFormatter={(value) => `$${value / 1000}k`}
-              width={isMobile ? 40 : 60}
+              tickFormatter={(value) => `$${value.toLocaleString()}`}
+              width={isMobile ? 50 : 90} 
             />
+            
             <Tooltip
-              cursor={{ fill: 'rgba(241, 245, 249, 0.5)', radius: 10 }}
+              cursor={{ fill: 'rgba(30, 58, 95, 0.03)', radius: 12 }}
               contentStyle={{
-                borderRadius: '16px',
+                borderRadius: '24px',
                 border: 'none',
-                boxShadow: '0 10px 15px -3px rgb(0 0 0 / 0.1)',
-                fontSize: isMobile ? '12px' : '14px',
-                fontWeight: 800,
-                padding: '10px 14px'
+                boxShadow: '0 25px 50px -12px rgb(0 0 0 / 0.15)',
+                fontSize: '14px',
+                fontWeight: 900,
+                padding: '16px 20px',
+                backgroundColor: '#ffffff'
               }}
-              formatter={(value: number) => [`$${value.toLocaleString()}`, 'Цена']}
+              formatter={(value: number) => [`$${value.toLocaleString()}`, 'Цена в USD']}
             />
+            
             <Bar
               dataKey="price"
               fill="url(#barGradient)"
-              radius={[8, 8, 2, 2]}
-              barSize={isMobile ? 20 : 45}
+              radius={[12, 12, 4, 4]}
+              barSize={isMobile ? 24 : 50}
+              // Ustundagi yozuvlar ham to'liq songa o'tkazildi
               label={{
                 position: 'top',
                 fill: '#1E3A5F',
-                fontSize: isMobile ? 10 : 13,
+                fontSize: isMobile ? 9 : 12,
                 fontWeight: 900,
-                formatter: (val: number) => `$${(val / 1000).toFixed(1)}k`,
-                offset: 10
+                formatter: (val: number) => `$${val.toLocaleString()}`,
+                offset: 15
               }}
             />
           </BarChart>

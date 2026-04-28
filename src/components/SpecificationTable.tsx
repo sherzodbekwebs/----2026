@@ -29,7 +29,6 @@ export const SpecificationTable = ({ data }: { data: TrailerSpec[] }) => {
 
   return (
     <div className="bg-white rounded-[10px] md:rounded-[10px] border border-slate-200 shadow-sm overflow-hidden mb-8 md:mb-12 select-none">
-      {/* Header: Mobil qurilmada ustma-ust tushadi */}
       <div className="p-4 md:p-8 border-b border-slate-100 flex flex-col md:flex-row items-start md:items-center justify-between gap-4 bg-white">
         <h4 className="text-lg md:text-xl font-black text-[#1E3A5F] uppercase tracking-tighter italic">
           Технические Характеристики
@@ -40,7 +39,6 @@ export const SpecificationTable = ({ data }: { data: TrailerSpec[] }) => {
         </div>
       </div>
 
-      {/* Jadval konteyneri: Touch scrollni yaxshilash uchun touch-pan-x qo'shildi */}
       <div 
         ref={scrollRef}
         onMouseDown={handleMouseDown}
@@ -88,13 +86,13 @@ export const SpecificationTable = ({ data }: { data: TrailerSpec[] }) => {
                 </td>
                 <td className="p-3 md:p-5 text-xs md:text-sm font-black text-slate-800 border-r border-b border-slate-100">{typeof item.mass === 'number' ? item.mass.toLocaleString() : item.mass}</td>
                 <td className="p-3 md:p-5 text-xs md:text-sm font-black text-slate-800 border-r border-b border-slate-100">{item.volume} м³</td>
-                <td className="p-3 md:p-5 text-[10px] md:text-[12px] font-bold text-slate-700 max-w-[150px] md:max-w-[220px] leading-tight border-r border-b border-slate-100">{item.braking}</td>
+                <td className="p-3 md:p-5 text-[10px] md:text-[13px] font-bold text-slate-700 max-w-[150px] md:max-w-[220px] leading-tight border-r border-b border-slate-100">{item.braking}</td>
                 <td className="p-3 md:p-5 text-xs md:text-sm font-black text-[#1E3A5F] border-r border-b border-slate-100">{item.loadCapacity}</td>
-                <td className="p-3 md:p-5 text-[10px] md:text-[12px] font-bold text-slate-700 max-w-[120px] md:max-w-[180px] leading-relaxed border-r border-b border-slate-100">{item.dimensions}</td>
-                <td className="p-3 md:p-5 text-[10px] md:text-[12px] font-bold text-slate-700 border-r border-b border-slate-100">{item.suspension}</td>
-                <td className="p-3 md:p-5 text-[10px] md:text-[12px] font-bold text-slate-700 border-r border-b border-slate-100">{item.axleBrand}</td>
-                <td className="p-3 md:p-5 text-[10px] md:text-[12px] font-bold text-slate-700 max-w-[150px] md:max-w-[220px] leading-tight border-r border-b border-slate-100">{item.painting}</td>
-                <td className="p-3 md:p-5 text-xs md:text-sm font-black text-slate-800 border-r border-b border-slate-100">{item.superstructure}</td>
+                <td className="p-3 md:p-5 text-[10px] md:text-[13px] font-bold text-slate-700 max-w-[120px] md:max-w-[180px] leading-relaxed border-r border-b border-slate-100">{item.dimensions}</td>
+                <td className="p-3 md:p-5 text-[10px] md:text-[13px] font-bold text-slate-700 border-r border-b border-slate-100">{item.suspension}</td>
+                <td className="p-3 md:p-5 text-[10px] md:text-[13px] font-bold text-slate-700 border-r border-b border-slate-100">{item.axleBrand}</td>
+                <td className="p-3 md:p-5 text-[10px] md:text-[13px] font-bold text-slate-700 max-w-[150px] md:max-w-[220px] leading-tight border-r border-b border-slate-100">{item.painting}</td>
+                <td className="p-3 md:p-5 text-[10px] md:text-[13px] font-bold text-slate-700 border-r border-b border-slate-100">{item.superstructure}</td>
               </tr>
             ))}
           </tbody>
