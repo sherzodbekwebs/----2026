@@ -41,7 +41,7 @@ export default function App() {
           </FadeIn>
 
           {/* Market Share qismi */}
-          {isCurtain && (
+          {activeCategory === 'curtain-3' && (
             <FadeIn>
               <MarketShareAnalytics data2025={MARKET_SHARE_2025} data2026={MARKET_SHARE_2026} />
             </FadeIn>
