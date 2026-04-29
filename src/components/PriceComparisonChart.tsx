@@ -1,9 +1,8 @@
 import React, { useEffect, useState } from 'react';
-import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from 'recharts';
-import { CircleDollarSign } from 'lucide-react';
+import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, Cell } from 'recharts';
+import { CircleDollarSign, ExternalLink } from 'lucide-react'; // ExternalLink qo'shildi
 import { TrailerSpec } from '../types';
 
-// Rasmlar xaritasi
 const categoryImages: Record<string, string> = {
   'curtain-3': '/uat3os.png',
   'curtain-4': '/uat4.png',
@@ -29,27 +28,23 @@ export const PriceComparisonChart = ({ data, activeCategory }: PriceComparisonCh
     return () => window.removeEventListener('resize', handleResize);
   }, []);
 
-  // Datani tayyorlash: priceUsd null bo'lmaganlarini saralab olamiz
+  // 1. ChartData'ga 'from' ustunini ham qo'shamiz
   const chartData = data
     .filter(item => item.priceUsd !== null && item.priceUsd !== undefined)
     .map(item => ({
       name: item.brand,
       priceUsd: item.priceUsd as number,
-      priceR: item.priceR, 
+      priceR: item.priceR,
+      source: item.from, // <<-- Manba havolasi
     })).sort((a, b) => b.priceUsd - a.priceUsd);
 
-  // MAXSUS LABEL: Xatolikdan himoyalangan variant
   const renderCustomBarLabel = (props: any) => {
     const { x, y, width, value, index } = props;
-    
-    // chartData[index] mavjudligini tekshiramiz
     const item = chartData && chartData[index];
-    
-    if (!item) return null; // Agar ma'lumot yo'q bo'lsa, hech narsa chizmaymiz
+    if (!item) return null;
 
     return (
       <g>
-        {/* USD Narxi */}
         <text 
           x={x + width / 2} 
           y={y - 22} 
@@ -60,8 +55,6 @@ export const PriceComparisonChart = ({ data, activeCategory }: PriceComparisonCh
         >
           {value ? `$${value.toLocaleString()}` : ''}
         </text>
-        
-        {/* RUB Narxi - Faqat priceR mavjud bo'lsa chiqadi */}
         {item.priceR && (
           <text 
             x={x + width / 2} 
@@ -90,7 +83,7 @@ export const PriceComparisonChart = ({ data, activeCategory }: PriceComparisonCh
               Сравнение цен
             </h4>
             <p className="text-[10px] md:text-xs font-bold text-slate-400 uppercase tracking-[0.2em]">
-              USD / RUB (Текущая стоимость)
+              Нажмите на колонку для перехода к источнику
             </p>
           </div>
         </div>
@@ -109,12 +102,7 @@ export const PriceComparisonChart = ({ data, activeCategory }: PriceComparisonCh
           <ResponsiveContainer width="100%" height="100%">
             <BarChart
               data={chartData}
-              margin={{
-                top: 50,
-                right: 10,
-                left: isMobile ? -10 : 20,
-                bottom: 70
-              }}
+              margin={{ top: 50, right: 10, left: isMobile ? -10 : 20, bottom: 70 }}
             >
               <defs>
                 <linearGradient id="barGradient" x1="0" y1="0" x2="0" y2="1">
@@ -123,7 +111,6 @@ export const PriceComparisonChart = ({ data, activeCategory }: PriceComparisonCh
                 </linearGradient>
               </defs>
               <CartesianGrid strokeDasharray="4 4" vertical={false} stroke="#F1F5F9" />
-              
               <XAxis
                 dataKey="name"
                 axisLine={false}
@@ -131,9 +118,8 @@ export const PriceComparisonChart = ({ data, activeCategory }: PriceComparisonCh
                 interval={0}
                 angle={-45}
                 textAnchor="end"
-                tick={{ fill: '#475569', fontSize: isMobile ? 10 : 13, fontStyle: 'italic', fontWeight: 900 }}
+                tick={{ fill: '#475569', fontSize: isMobile ? 10 : 13, fontWeight: 900 }}
               />
-              
               <YAxis
                 axisLine={false}
                 tickLine={false}
@@ -152,31 +138,43 @@ export const PriceComparisonChart = ({ data, activeCategory }: PriceComparisonCh
                   fontWeight: 900,
                   padding: '16px 20px'
                 }}
+                // 2. Tooltip ichida manba borligini bildiramiz
                 formatter={(value: any, name: any, props: any) => {
-                  // Payload ichidan rublni xavfsiz olish
                   const rubPrice = props?.payload?.priceR;
+                  const source = props?.payload?.source;
                   return [
-                    <div key="usd-rub">
-                      <div className="text-[#1E3A5F]">${value?.toLocaleString()}</div>
-                      {rubPrice && <div className="text-slate-400 text-xs mt-1">{rubPrice.toLocaleString()} ₽</div>}
+                    <div key="usd-rub" className="flex flex-col gap-1">
+                      <div className="text-[#1E3A5F] text-base font-black">${value?.toLocaleString()}</div>
+                      {rubPrice && <div className="text-slate-400 text-xs">{rubPrice.toLocaleString()} ₽</div>}
+                      {source && (
+                        <div className="mt-2 pt-2 border-t border-slate-50 text-[10px] text-blue-500 flex items-center gap-1 uppercase tracking-wider">
+                          Нажмите для перехода <ExternalLink size={10} />
+                        </div>
+                      )}
                     </div>,
                     'Цена'
                   ];
                 }}
               />
               
+              {/* 3. Ustunni bosiladigan (clickable) qilamiz */}
               <Bar
                 dataKey="priceUsd" 
                 fill="url(#barGradient)" 
                 radius={[12, 12, 4, 4]} 
                 barSize={isMobile ? 24 : 50}
                 label={renderCustomBarLabel}
+                className="cursor-pointer" // Bosish mumkinligini ko'rsatish
+                onClick={(entry) => {
+                  if (entry.source) {
+                    window.open(entry.source, '_blank', 'noopener,noreferrer');
+                  }
+                }}
               />
             </BarChart>
           </ResponsiveContainer>
         ) : (
-          /* Ma'lumot mutlaqo yo'q bo'lsa ko'rsatiladigan bo'sh holat */
-          <div className="h-full w-full flex items-center justify-center text-slate-400 font-medium italic">
+          <div className="h-full w-full flex items-center justify-center text-slate-400 font-medium ">
             Нет данных по ценам для этой категории
           </div>
         )}

@@ -30,6 +30,7 @@ export const TRAILER_DATA: TrailerSpec[] = [
     roof: 'x',
     superstructure: 'Cтальная рама',
     category: 'curtain-3',
+    from: 'https://uzautotrailer.uz/product/93'
   },
   {
     id: 2,
@@ -52,15 +53,16 @@ export const TRAILER_DATA: TrailerSpec[] = [
     roof: 'Тент 650-750гр',
     superstructure: 'Металлический пол, металлическая обрешетка',
     category: 'curtain-3',
+    from: null
   },
   {
     id: 3,
     foto: '/bonum3.png',
     brand: 'BONUM',
     type: '3 осный',
-    priceSum: '608 000 000 сум',
-    priceUsd: 49800,
-    priceR: 3740060,
+    priceSum: '650 550 356 сум',
+    priceUsd: 53901,
+    priceR: 4060000,
     mass: 6700,
     volume: 91,
     electrical: 'Aspoeck / Hella / Ermax или аналог',
@@ -74,6 +76,7 @@ export const TRAILER_DATA: TrailerSpec[] = [
     roof: 'Тент боковой 900 гр/м2, крыша 680 гр/м2, сдвижная система',
     superstructure: 'Алюминиевый портал, задние ворота, сдвижные стойки, ламинированный пол 27-30 мм, обрешётка',
     category: 'curtain-3',
+    from: 'https://www.bonum-trailer.ru/kategorii/tentovannyye-polupritsepy/'
   },
   {
     id: 4,
@@ -96,6 +99,7 @@ export const TRAILER_DATA: TrailerSpec[] = [
     roof: 'Edscha, PVC тент',
     superstructure: 'Стальная рама, Multilock, алюминиевые двери',
     category: 'curtain-3',
+    from: null
   },
   {
     id: 5,
@@ -118,6 +122,7 @@ export const TRAILER_DATA: TrailerSpec[] = [
     roof: 'Сдвижная крыша Versus, штора 900 гр',
     superstructure: 'Стальная рама, фанера 30мм, двери 270°',
     category: 'curtain-3',
+    from: null
   },
   {
     id: 6,
@@ -140,6 +145,7 @@ export const TRAILER_DATA: TrailerSpec[] = [
     roof: 'Сдвижная крыша Edscha, тент 750гр',
     superstructure: 'Алюминиевые борта, фанера 30мм, ворота',
     category: 'curtain-3',
+    from: null
   },
   {
     id: 7,
@@ -162,6 +168,7 @@ export const TRAILER_DATA: TrailerSpec[] = [
     roof: 'Тент 900 гр/м2 (боковой) / 680 гр/м2 (крыша)',
     superstructure: 'Сдвижная крыша SESAM, фанера 30мм, алюминиевые ворота, усиленная рама',
     category: 'curtain-3',
+    from: null
   },
   {
     id: 8,
@@ -184,6 +191,7 @@ export const TRAILER_DATA: TrailerSpec[] = [
     roof: 'Шторный кузов',
     superstructure: 'Ящик инструментов, корзина на 2 колеса, WM Lock',
     category: 'curtain-3',
+    from: null
   },
   {
     id: 9,
@@ -206,6 +214,7 @@ export const TRAILER_DATA: TrailerSpec[] = [
     roof: 'Edscha, тент 680гр',
     superstructure: 'Алюминиевые борта, фанера 30мм, стальная рама',
     category: 'curtain-3',
+    from: null
   },
   {
     id: 10,
@@ -228,6 +237,7 @@ export const TRAILER_DATA: TrailerSpec[] = [
     roof: 'Сдвижная крыша и боковой тент (900 г/м²)',
     superstructure: 'Передняя стенка алюминий/сталь, задние распашные ворота',
     category: 'curtain-3',
+    from: null
   },
   {
     id: 11,
@@ -250,6 +260,7 @@ export const TRAILER_DATA: TrailerSpec[] = [
     roof: 'Сдвижная крыша и боковины, тент 900 г/м²',
     superstructure: 'Стальная передняя стенка, алюминиевые ворота (4 замка), пол 30 мм, ящик под коники',
     category: 'curtain-3',
+    from: null
   },
 
   {
@@ -273,6 +284,7 @@ export const TRAILER_DATA: TrailerSpec[] = [
     roof: 'Сдвижной механизм крыши Versus / Edscha, тент 900 г/м²',
     superstructure: 'Стальная передняя стенка, алюминиевые задние ворота, коники в комплекте',
     category: 'curtain-3',
+    from: null
   },
   {
     id: 1,
@@ -295,6 +307,7 @@ export const TRAILER_DATA: TrailerSpec[] = [
     roof: 'Сдвижной механизм Edscha, бок 900 г/м², крыша 680 г/м²',
     superstructure: 'Алюм. ворота, стальная перед. стенка, 26 такелажных скоб',
     category: 'curtain-4',
+    from: null
   },
   {
     id: 2,
@@ -317,15 +330,16 @@ export const TRAILER_DATA: TrailerSpec[] = [
     roof: 'Тент 650–750 г/м², сдвижная крыша',
     superstructure: 'Шторный тип, BDF контейнер (33 европаллета)',
     category: 'curtain-4',
+    from: null
   },
   {
     id: 3,
     foto: '/bonum4.png',
     brand: 'BONUM',
     type: '4 осный',
-    priceSum: '',
-    priceUsd: null,
-    priceR: null,
+    priceSum: '829 211 353 сум',
+    priceUsd: 68704,
+    priceR: 5175000,
     mass: 7450,
     volume: 91,
     electrical: 'Aspoeck / Hella / Ermax (24V)',
@@ -339,6 +353,7 @@ export const TRAILER_DATA: TrailerSpec[] = [
     roof: 'Сдвижная крыша, боковой тент 900 г/м², крыша 680 г/м²',
     superstructure: 'Алюм. ворота (4 замка), пол 30 мм, ящик для коников, стаканы 80x80 мм',
     category: 'curtain-4',
+    from: 'https://www.bonum-trailer.ru/kategorii/tentovannyye-polupritsepy/'
   },
   {
     id: 4,
@@ -361,6 +376,7 @@ export const TRAILER_DATA: TrailerSpec[] = [
     roof: 'Сдвижная крыша Krone, тент 900 г/м² (с усилением)',
     superstructure: 'Передняя стенка стальная, алюминиевые ворота, рама Multi Lock',
     category: 'curtain-4',
+    from: null
   },
   {
     id: 5,
@@ -383,6 +399,7 @@ export const TRAILER_DATA: TrailerSpec[] = [
     roof: 'Сдвижная крыша Edscha (Германия), тент 900 г/м²',
     superstructure: 'Стальная передняя стенка, алюминиевые ворота, пол из финской фанеры 30 мм',
     category: 'curtain-4',
+    from: null
   },
   {
     id: 6,
@@ -405,6 +422,7 @@ export const TRAILER_DATA: TrailerSpec[] = [
     roof: 'Сдвижной каркас Edscha (Германия), тент 900 г/м²',
     superstructure: 'Стальная передняя стенка, алюминиевые ворота, 6 рядов бортовых досок',
     category: 'curtain-4',
+    from: null
   },
   {
     id: 7,
@@ -427,6 +445,7 @@ export const TRAILER_DATA: TrailerSpec[] = [
     roof: 'Сдвижная крыша Versus (Бельгия), тент 900 г/м²',
     superstructure: 'Стальная передняя стенка, алюминиевые ворота, пол 30 мм, стальные стойки',
     category: 'curtain-4',
+    from: null
   },
   {
     id: 8,
@@ -449,6 +468,7 @@ export const TRAILER_DATA: TrailerSpec[] = [
     roof: 'Шторный механизм, усиленная крыша',
     superstructure: 'Система WM Lock (237 точек крепления), 22 кармана под коники, рукомойник 30л',
     category: 'curtain-4',
+    from: null
   },
   {
     id: 9,
@@ -471,6 +491,7 @@ export const TRAILER_DATA: TrailerSpec[] = [
     roof: 'Сдвижная крыша, тент высокой плотности (900 г/м²)',
     superstructure: 'Стальная передняя стенка, алюминиевые ворота, стальные борта (опция)',
     category: 'curtain-4',
+    from: null
   },
   {
     id: 10,
@@ -493,6 +514,7 @@ export const TRAILER_DATA: TrailerSpec[] = [
     roof: 'Сдвижной механизм крыши Fliegl Blitz, тент 900 г/м²',
     superstructure: 'Рама со скошенным передним краем (Fliegl Chassis), алюм. ворота',
     category: 'curtain-4',
+    from: null
   },
   {
     id: 11,
@@ -515,6 +537,7 @@ export const TRAILER_DATA: TrailerSpec[] = [
     roof: 'Сдвижной механизм (европейского типа), тент 900 г/м²',
     superstructure: 'Стальная передняя стенка, алюминиевые ворота, пол 30 мм, стальные стойки',
     category: 'curtain-4',
+    from: null
   },
   {
     id: 12,
@@ -537,6 +560,7 @@ export const TRAILER_DATA: TrailerSpec[] = [
     roof: 'Сдвижная крыша, тент бок 900 г/м², крыша 650 г/м²',
     superstructure: 'Стальная перед. стенка, алюм. ворота (4 замка), пол 30 мм, коники',
     category: 'curtain-4',
+    from: null
   },
   {
     id: 13,
@@ -559,6 +583,7 @@ export const TRAILER_DATA: TrailerSpec[] = [
     roof: 'Сдвижной механизм Versus (Бельгия), тент 900 г/м²',
     superstructure: 'Стальная передняя стенка, алюм. ворота, рама из стали Strenx (Швеция)',
     category: 'curtain-4',
+    from: null
   },
   {
     id: 1,
@@ -581,6 +606,7 @@ export const TRAILER_DATA: TrailerSpec[] = [
     roof: '—',
     superstructure: 'Рама с 6 балками и 12 съемными замками LAXO',
     category: 'container-3',
+    from: null
   },
   {
     id: 2,
@@ -603,6 +629,7 @@ export const TRAILER_DATA: TrailerSpec[] = [
     roof: 'Контейнерная платформа открытого типа',
     superstructure: 'Платформа для перевозки контейнеров',
     category: 'container-3',
+    from: null
   },
   {
     id: 4,
@@ -625,6 +652,7 @@ export const TRAILER_DATA: TrailerSpec[] = [
     roof: 'Контейнерная платформа',
     superstructure: 'Рама Gooseneck, фитинговые замки',
     category: 'container-3',
+    from: null
   },
   {
     id: 5,
@@ -647,6 +675,7 @@ export const TRAILER_DATA: TrailerSpec[] = [
     roof: 'Контейнерная платформа',
     superstructure: 'Платформа с 8 швартовочными кольцами',
     category: 'container-3',
+    from: null
   },
   {
     id: 6,
@@ -669,6 +698,7 @@ export const TRAILER_DATA: TrailerSpec[] = [
     roof: 'Контейнерная платформа',
     superstructure: '12 фитинговых замков, съемная рабочая площадка',
     category: 'container-3',
+    from: null
   },
   {
     id: 7,
@@ -691,6 +721,7 @@ export const TRAILER_DATA: TrailerSpec[] = [
     roof: 'Контейнерная платформа',
     superstructure: 'Выдвижная рама (тип 1 и тип 2)',
     category: 'container-3',
+    from: null
   },
   {
     id: 8,
@@ -713,6 +744,7 @@ export const TRAILER_DATA: TrailerSpec[] = [
     roof: 'Контейнерная платформа',
     superstructure: '12 выдвижных ISO замков, шасси JOST E100',
     category: 'container-3',
+    from: null
   },
   {
     id: 9,
@@ -735,6 +767,7 @@ export const TRAILER_DATA: TrailerSpec[] = [
     roof: 'Колесная платформа',
     superstructure: 'Ниши для колес (100 мм), съемные трапы, алюм. борта (400 мм)',
     category: 'container-3',
+    from: null
   },
 
 
@@ -760,6 +793,7 @@ export const TRAILER_DATA: TrailerSpec[] = [
     roof: 'Контейнерная платформа',
     superstructure: '12 фитинговых замков LAXO, 6 усиленных балок',
     category: 'container-4',
+    from: null
   },
 
   {
@@ -783,6 +817,7 @@ export const TRAILER_DATA: TrailerSpec[] = [
     roof: 'Контейнерная платформа',
     superstructure: 'Фитинговые замки 40ft',
     category: 'container-4',
+    from: null
   },
 
   {
@@ -790,9 +825,9 @@ export const TRAILER_DATA: TrailerSpec[] = [
     foto: '/kbonum4.png',
     brand: 'BONUM',
     type: '4 осная',
-    priceSum: '',
-    priceUsd: null,
-    priceR: null,
+    priceSum: '519 959 583 сум',
+    priceUsd: 43081,
+    priceR: 3245000,
     mass: 5800,
     volume: "1x20', 2x20', 1x40' HC",
     electrical: 'Aspoeck / Hella / Ermax 24V',
@@ -806,6 +841,7 @@ export const TRAILER_DATA: TrailerSpec[] = [
     roof: 'Открытая платформа',
     superstructure: '6 балок с фитинговыми замками',
     category: 'container-4',
+    from: 'https://www.bonum-trailer.ru/kategorii/kontejnerovozyi/'
   },
 
   // {
@@ -851,6 +887,7 @@ export const TRAILER_DATA: TrailerSpec[] = [
     roof: 'Контейнерная платформа',
     superstructure: 'JOST замки',
     category: 'container-4',
+    from: null
   },
 
   {
@@ -874,6 +911,7 @@ export const TRAILER_DATA: TrailerSpec[] = [
     roof: 'Контейнерная платформа',
     superstructure: 'S700 рама',
     category: 'container-4',
+    from: null
   },
 
   {
@@ -897,6 +935,7 @@ export const TRAILER_DATA: TrailerSpec[] = [
     roof: 'Контейнерная платформа',
     superstructure: '12 фитинговых замков',
     category: 'container-4',
+    from: null
   },
 
   // {
@@ -942,6 +981,7 @@ export const TRAILER_DATA: TrailerSpec[] = [
     roof: 'контейнерная платформа',
     superstructure: 'фитинговые замки',
     category: 'container-4',
+    from: null
   },
 
   {
@@ -965,6 +1005,7 @@ export const TRAILER_DATA: TrailerSpec[] = [
     roof: 'контейнерная платформа',
     superstructure: 'ISO locks 12 pcs',
     category: 'container-4',
+    from: null
   },
 
   {
@@ -988,6 +1029,7 @@ export const TRAILER_DATA: TrailerSpec[] = [
     roof: 'контейнерная платформа',
     superstructure: '6 ISO locks',
     category: 'container-4',
+    from: null
   },
 
 
@@ -1011,7 +1053,8 @@ export const TRAILER_DATA: TrailerSpec[] = [
     painting: 'Антикоррозийное покрытие',
     tires: '385/55 R22.5 (6+1 шт)',
     superstructure: 'Сэндвич-панели + Thermo King SLX 300',
-    category: 'reefer-3'
+    category: 'reefer-3',
+    from: null
   },
   {
     id: 'ref-tonar-3',
@@ -1032,7 +1075,8 @@ export const TRAILER_DATA: TrailerSpec[] = [
     painting: 'Антикоррозийное покрытие рамы',
     tires: 'Шины 385/65 R22.5',
     superstructure: 'Изотермический кузов + ХОУ',
-    category: 'reefer-3'
+    category: 'reefer-3',
+    from: null
   },
   // {
   //   id: 'ref-bonum-3',
@@ -1062,7 +1106,8 @@ export const TRAILER_DATA: TrailerSpec[] = [
     painting: 'Заводская антикоррозийная',
     tires: 'Пневмоподвеska, стандартные шины',
     superstructure: 'Сэндвич-панели + телематика KRONE',
-    category: 'reefer-3'
+    category: 'reefer-3',
+    from: null
   },
   {
     id: 'ref-orthaus-3',
@@ -1083,7 +1128,8 @@ export const TRAILER_DATA: TrailerSpec[] = [
     painting: 'Белый (оцинкованный кузов)',
     tires: '385/65 R22.5 (Pirelli/Continental)',
     superstructure: 'Сэндвич-панели (под ХОУ)',
-    category: 'reefer-3'
+    category: 'reefer-3',
+    from: null
   },
   {
     id: 'ref-grunwald-3',
@@ -1104,7 +1150,8 @@ export const TRAILER_DATA: TrailerSpec[] = [
     painting: 'Белый (высокая защита)',
     tires: '385/65 R22.5',
     superstructure: 'Сэндвич (стеклопластик + XPS)',
-    category: 'reefer-3'
+    category: 'reefer-3',
+    from: null
   },
   {
     id: 'ref-fliegl-3',
@@ -1125,7 +1172,8 @@ export const TRAILER_DATA: TrailerSpec[] = [
     painting: 'KTL-обработка шасси (10 лет гарантии)',
     tires: '385/65 R22.5 (6+1 шт)',
     superstructure: 'ХОУ (Carrier / Thermo King)',
-    category: 'reefer-3'
+    category: 'reefer-3',
+    from: null
   },
   {
     id: 'ref-cimc-3',
@@ -1146,7 +1194,8 @@ export const TRAILER_DATA: TrailerSpec[] = [
     painting: 'KTL-обработка рамы',
     tires: 'Усиленные для тяжелых условий',
     superstructure: 'Изотермический кузов CIMC',
-    category: 'reefer-3'
+    category: 'reefer-3',
+    from: null
   },
   {
     id: 'ref-kaile-3',
@@ -1167,6 +1216,7 @@ export const TRAILER_DATA: TrailerSpec[] = [
     painting: 'Сэндвич-панели (пол 100мм)',
     tires: '385/65R22.5 алюминиевые диски',
     superstructure: 'Carrier Vector 1550 + паллетный ящик',
-    category: 'reefer-3'
+    category: 'reefer-3',
+    from: null
   }
 ];
