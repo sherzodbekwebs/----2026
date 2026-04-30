@@ -30,7 +30,7 @@ export const SpecificationTable = ({ data }: { data: TrailerSpec[] }) => {
   return (
     <div className="bg-white rounded-[10px] md:rounded-[10px] border border-slate-200 shadow-sm overflow-hidden mb-8 md:mb-12 select-none">
       <div className="p-4 md:p-8 border-b border-slate-100 flex flex-col md:flex-row items-start md:items-center justify-between gap-4 bg-white">
-        <h4 className="text-lg md:text-xl font-black text-[#1E3A5F] uppercase tracking-tighter ">
+        <h4 className="text-lg md:text-xl font-black text-[#1E3A5F]  tracking-tighter ">
           Технические Характеристики
         </h4>
         <div className="flex items-center gap-2 px-3 py-1.5 md:px-4 md:py-2 bg-slate-50 rounded-lg md:rounded-xl text-[9px] md:text-[11px] font-black text-slate-500 uppercase">
