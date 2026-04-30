@@ -12,7 +12,7 @@ export const TRAILER_DATA: TrailerSpec[] = [
   {
     id: 1,
     foto: '/uat3os.png',
-    brand: 'VOLLKRAFT (UAT)',
+    brand: 'VOLLKRAFT',
     type: '3 осный',
     priceSum: '504 000 000 сум',
     priceUsd: 41410,
@@ -30,6 +30,7 @@ export const TRAILER_DATA: TrailerSpec[] = [
     roof: 'x',
     superstructure: 'Cтальная рама',
     category: 'curtain-3',
+    source: 'Д. Семёнов',
     from: 'https://uzautotrailer.uz/product/93'
   },
   {
@@ -37,9 +38,9 @@ export const TRAILER_DATA: TrailerSpec[] = [
     foto: '/tonar3.png',
     brand: 'TONAR',
     type: '3 осный',
-    priceSum: '534 789 519 сум',
-    priceUsd: 43942,
-    priceR: 3300115,
+    priceSum: '545 245 966 сум',
+    priceUsd: 45673,
+    priceR: 3420000,
     mass: 7500,
     volume: 92,
     electrical: '24V',
@@ -53,6 +54,7 @@ export const TRAILER_DATA: TrailerSpec[] = [
     roof: 'Тент 650-750гр',
     superstructure: 'Металлический пол, металлическая обрешетка',
     category: 'curtain-3',
+    source: 'Д. Семёнов',
     from: 'https://tonardon.ru/polupritsep-shtornyj-tentovannyj-3-osi-tonar-99881'
   },
   {
@@ -60,9 +62,9 @@ export const TRAILER_DATA: TrailerSpec[] = [
     foto: '/bonum3.png',
     brand: 'BONUM',
     type: '3 осный',
-    priceSum: '650 550 356 сум',
-    priceUsd: 53901,
-    priceR: 4060000,
+    priceSum: '631 337 434 сум',
+    priceUsd: 52885,
+    priceR: 3960000,
     mass: 6700,
     volume: 91,
     electrical: 'Aspoeck / Hella / Ermax или аналог',
@@ -76,6 +78,7 @@ export const TRAILER_DATA: TrailerSpec[] = [
     roof: 'Тент боковой 900 гр/м2, крыша 680 гр/м2, сдвижная система',
     superstructure: 'Алюминиевый портал, задние ворота, сдвижные стойки, ламинированный пол 27-30 мм, обрешётка',
     category: 'curtain-3',
+    source: 'Д. Семёнов',
     from: 'https://www.bonum-trailer.ru/kategorii/tentovannyye-polupritsepy/'
   },
   {
@@ -83,9 +86,9 @@ export const TRAILER_DATA: TrailerSpec[] = [
     foto: '/krone3.png',
     brand: 'KRONE',
     type: '3 осный',
-    priceSum: '672 000 000 сум',
-    priceUsd: 55000,
-    priceR: 4130589,
+    priceSum: '1 068 171 922 сум',
+    priceUsd: 89477,
+    priceR: 6700000,
     mass: 6800,
     volume: 92,
     electrical: '24V LED',
@@ -99,6 +102,7 @@ export const TRAILER_DATA: TrailerSpec[] = [
     roof: 'Edscha, PVC тент',
     superstructure: 'Стальная рама, Multilock, алюминиевые двери',
     category: 'curtain-3',
+    source: 'Д. Семёнов',
     from: 'https://int.krone-trailer.com/%D1%80%D1%83%D1%81%D1%81%D0%BA%D0%B8%D0%B9/produkcija/polupricepy-s-bortovoi-platformoi/'
   },
   {
@@ -106,9 +110,9 @@ export const TRAILER_DATA: TrailerSpec[] = [
     foto: '/orthaus3.png',
     brand: 'ORTHAUS',
     type: '3 осный',
-    priceSum: '660 947 994 сум',
-    priceUsd: 54851,
-    priceR: 4100000,
+    priceSum: '924 686 142 сум',
+    priceUsd: 77458,
+    priceR: 5800000,
     mass: 6300,
     volume: '90 - 92',
     electrical: 'Aspock 24V LED',
@@ -122,6 +126,7 @@ export const TRAILER_DATA: TrailerSpec[] = [
     roof: 'Сдвижная крыша Versus, штора 900 гр',
     superstructure: 'Стальная рама, фанера 30мм, двери 270°',
     category: 'curtain-3',
+    source: 'Д. Семёнов',
     from: 'https://orthausrus.ru/stocks/111-orthaus-v3-136m-shtornyj-trehosnyj.html'
   },
   {
@@ -129,9 +134,9 @@ export const TRAILER_DATA: TrailerSpec[] = [
     foto: '/koluman3.png',
     brand: 'KOLUMAN',
     type: '3 осный',
-    priceSum: '684 000 000 сум',
-    priceUsd: 56000,
-    priceR: 4205690,
+    priceSum: '661 628 877 сум',
+    priceUsd: 55422,
+    priceR: 4150000,
     mass: 6900,
     volume: '91.5 - 92',
     electrical: 'Aspock / Hella 24V',
@@ -145,6 +150,7 @@ export const TRAILER_DATA: TrailerSpec[] = [
     roof: 'Сдвижная крыша Edscha, тент 750гр',
     superstructure: 'Алюминиевые борта, фанера 30мм, ворота',
     category: 'curtain-3',
+    source: 'Д. Семёнов',
     from: 'https://koluman.ru/shtornyj-polupriczep-13-6'
   },
   {
@@ -152,9 +158,9 @@ export const TRAILER_DATA: TrailerSpec[] = [
     foto: '/grunwald3.png',
     brand: 'GRUNWALD',
     type: '3 осный',
-    priceSum: '624 000 000 сум',
-    priceUsd: 51000,
-    priceR: 3830182,
+    priceSum: '621 771 716 сум',
+    priceUsd: 52084,
+    priceR: 3900000,
     mass: 6600,
     volume: 92,
     electrical: '24V ERMAX',
@@ -168,6 +174,7 @@ export const TRAILER_DATA: TrailerSpec[] = [
     roof: 'Тент 900 гр/м2 (боковой) / 680 гр/м2 (крыша)',
     superstructure: 'Сдвижная крыша SESAM, фанера 30мм, алюминиевые ворота, усиленная рама',
     category: 'curtain-3',
+    source: 'Д. Семёнов',
     from: 'https://alphatruck.ru/polupritsepy/gryunvald-samosvalnyye/polupritsep-shtorny-grunwald-grss-6887'
   },
   {
@@ -175,9 +182,9 @@ export const TRAILER_DATA: TrailerSpec[] = [
     foto: '/wegner3.png',
     brand: 'Wagnermaier',
     type: '3 осный',
-    priceSum: '735 746 338 сум',
-    priceUsd: 60454,
-    priceR: 4540193,
+    priceSum: '726 994 622 сум',
+    priceUsd: 60898,
+    priceR: 4560000,
     mass: 7450,
     volume: 110,
     electrical: 'Aspoeck / Ermax 24V (Full LED)',
@@ -191,16 +198,17 @@ export const TRAILER_DATA: TrailerSpec[] = [
     roof: 'Шторный кузов',
     superstructure: 'Ящик инструментов, корзина на 2 колеса, WM Lock',
     category: 'curtain-3',
+    source: 'Д. Семёнов',
     from: 'https://wagnermaier.com/ru/semitrailers/planenauflieger/'
   },
   {
     id: 9,
     foto: '/kaes3.png',
-    brand: 'KAESSBOHRER (ISOPAKCS)',
+    brand: 'KAESSBOHRER',
     type: '3 осный',
-    priceSum: null,
-    priceUsd: null,
-    priceR: null,
+    priceSum: '837 300 272 сум',
+    priceUsd: 70138,
+    priceR: 5251881,
     mass: 6700,
     volume: 92,
     electrical: '24V ISO',
@@ -214,6 +222,7 @@ export const TRAILER_DATA: TrailerSpec[] = [
     roof: 'Edscha, тент 680гр',
     superstructure: 'Алюминиевые борта, фанера 30мм, стальная рама',
     category: 'curtain-3',
+    source: 'Д. Семёнов',
     from: null
   },
   {
@@ -221,9 +230,9 @@ export const TRAILER_DATA: TrailerSpec[] = [
     foto: '/cimc3.png',
     brand: 'CIMC',
     type: '3 осный',
-    priceSum: null,
-    priceUsd: null,
-    priceR: null,
+    priceSum: '534 085 961 сум',
+    priceUsd: 44738,
+    priceR: 3350000,
     mass: '6700 – 7200',
     volume: '91 - 92',
     electrical: '24V Aspöck (европейский стандарт), 2x7 pin + 1x15 pin',
@@ -237,6 +246,7 @@ export const TRAILER_DATA: TrailerSpec[] = [
     roof: 'Сдвижная крыша и боковой тент (900 г/м²)',
     superstructure: 'Передняя стенка алюминий/сталь, задние распашные ворота',
     category: 'curtain-3',
+    source: 'Д. Семёнов',
     from: null
   },
   {
@@ -244,9 +254,9 @@ export const TRAILER_DATA: TrailerSpec[] = [
     foto: '/kaile3.png',
     brand: 'KAILE',
     type: '3 осный',
-    priceSum: '1 168 000 000 сум',
-    priceUsd: 95700,
-    priceR: 7187225,
+    priceSum: 'н.д.',
+    priceUsd: null,
+    priceR: null,
     mass: 7300,
     volume: '91 - 92',
     electrical: 'HELLA / Philips 24V (влагозащищенное)',
@@ -260,6 +270,7 @@ export const TRAILER_DATA: TrailerSpec[] = [
     roof: 'Сдвижная крыша и боковины, тент 900 г/м²',
     superstructure: 'Стальная передняя стенка, алюминиевые ворота (4 замка), пол 30 мм, ящик под коники',
     category: 'curtain-3',
+    source: 'Д. Семёнов',
     from: null
   },
 
@@ -268,9 +279,9 @@ export const TRAILER_DATA: TrailerSpec[] = [
     foto: '/gutrailer3.png',
     brand: 'GUT TRAILER',
     type: '3 осный',
-    priceSum: '932 800 000 сум',
-    priceUsd: 76500,
-    priceR: 5745273,
+    priceSum: 'н.д.',
+    priceUsd: null,
+    priceR: null,
     mass: 7000,
     volume: 92,
     electrical: 'Aspöck (Австрия) 24V в герметичном исполнении',
@@ -284,12 +295,13 @@ export const TRAILER_DATA: TrailerSpec[] = [
     roof: 'Сдвижной механизм крыши Versus / Edscha, тент 900 г/м²',
     superstructure: 'Стальная передняя стенка, алюминиевые задние ворота, коники в комплекте',
     category: 'curtain-3',
+    source: 'Д. Семёнов',
     from: null
   },
   {
     id: 1,
     foto: '/uat4.png',
-    brand: 'VOLLKRAFT (UAT)',
+    brand: 'VOLLKRAFT',
     type: '4 осный',
     priceSum: '672 000 000 сум',
     priceUsd: 55216,
@@ -307,6 +319,7 @@ export const TRAILER_DATA: TrailerSpec[] = [
     roof: 'Сдвижной механизм Edscha, бок 900 г/м², крыша 680 г/м²',
     superstructure: 'Алюм. ворота, стальная перед. стенка, 26 такелажных скоб',
     category: 'curtain-4',
+    source: 'Д. Семёнов',
     from: null
   },
   {
@@ -314,9 +327,9 @@ export const TRAILER_DATA: TrailerSpec[] = [
     foto: '/tonar4.png',
     brand: 'TONAR',
     type: '4 осный',
-    priceSum: '',
-    priceUsd: null,
-    priceR: null,
+    priceSum: '760 474 637 сум',
+    priceUsd: 63702,
+    priceR: 4770000,
     mass: 8000,
     volume: 92,
     electrical: '24 В, 2 розетки + ABS',
@@ -330,6 +343,7 @@ export const TRAILER_DATA: TrailerSpec[] = [
     roof: 'Тент 650–750 г/м², сдвижная крыша',
     superstructure: 'Шторный тип, BDF контейнер (33 европаллета)',
     category: 'curtain-4',
+    source: 'Д. Семёнов',
     from: null
   },
   {
@@ -337,9 +351,9 @@ export const TRAILER_DATA: TrailerSpec[] = [
     foto: '/bonum4.png',
     brand: 'BONUM',
     type: '4 осный',
-    priceSum: '829 211 353 сум',
-    priceUsd: 68704,
-    priceR: 5175000,
+    priceSum: 'н.д.',
+    priceUsd: null,
+    priceR: null,
     mass: 7450,
     volume: 91,
     electrical: 'Aspoeck / Hella / Ermax (24V)',
@@ -353,6 +367,7 @@ export const TRAILER_DATA: TrailerSpec[] = [
     roof: 'Сдвижная крыша, боковой тент 900 г/м², крыша 680 г/м²',
     superstructure: 'Алюм. ворота (4 замка), пол 30 мм, ящик для коников, стаканы 80x80 мм',
     category: 'curtain-4',
+    source: 'Д. Семёнов',
     from: 'https://www.bonum-trailer.ru/kategorii/tentovannyye-polupritsepy/'
   },
   {
@@ -376,6 +391,7 @@ export const TRAILER_DATA: TrailerSpec[] = [
     roof: 'Сдвижная крыша Krone, тент 900 г/м² (с усилением)',
     superstructure: 'Передняя стенка стальная, алюминиевые ворота, рама Multi Lock',
     category: 'curtain-4',
+    source: 'Д. Семёнов',
     from: null
   },
   {
@@ -383,9 +399,9 @@ export const TRAILER_DATA: TrailerSpec[] = [
     foto: '/orhaus4.png',
     brand: 'ORTHAUS',
     type: '4 осный',
-    priceSum: '',
-    priceUsd: null,
-    priceR: null,
+    priceSum: '972 514 735 сум',
+    priceUsd: 81464,
+    priceR: 6100000,
     mass: 8400,
     volume: 110,
     electrical: 'Aspöck (Австрия) 24V',
@@ -399,6 +415,7 @@ export const TRAILER_DATA: TrailerSpec[] = [
     roof: 'Сдвижная крыша Edscha (Германия), тент 900 г/м²',
     superstructure: 'Стальная передняя стенка, алюминиевые ворота, пол из финской фанеры 30 мм',
     category: 'curtain-4',
+    source: 'Д. Семёнов',
     from: null
   },
   {
@@ -406,7 +423,7 @@ export const TRAILER_DATA: TrailerSpec[] = [
     foto: '/koluman4.png',
     brand: 'KOLUMAN',
     type: '4 осный',
-    priceSum: '',
+    priceSum: 'н.д.',
     priceUsd: null,
     priceR: null,
     mass: 8500,
@@ -422,6 +439,7 @@ export const TRAILER_DATA: TrailerSpec[] = [
     roof: 'Сдвижной каркас Edscha (Германия), тент 900 г/м²',
     superstructure: 'Стальная передняя стенка, алюминиевые ворота, 6 рядов бортовых досок',
     category: 'curtain-4',
+    source: 'Д. Семёнов',
     from: null
   },
   {
@@ -429,7 +447,7 @@ export const TRAILER_DATA: TrailerSpec[] = [
     foto: '/grunwald4.png',
     brand: 'GRUNWALD',
     type: '4 осный',
-    priceSum: '',
+    priceSum: 'н.д.',
     priceUsd: null,
     priceR: null,
     mass: 8900,
@@ -445,6 +463,7 @@ export const TRAILER_DATA: TrailerSpec[] = [
     roof: 'Сдвижная крыша Versus (Бельгия), тент 900 г/м²',
     superstructure: 'Стальная передняя стенка, алюминиевые ворота, пол 30 мм, стальные стойки',
     category: 'curtain-4',
+    source: 'Д. Семёнов',
     from: null
   },
   {
@@ -452,9 +471,9 @@ export const TRAILER_DATA: TrailerSpec[] = [
     foto: '/wagner4.png',
     brand: 'Wagnermaier',
     type: '4 осный',
-    priceSum: '',
-    priceUsd: null,
-    priceR: null,
+    priceSum: '874 625 547 сум',
+    priceUsd: 73265,
+    priceR: 5486000,
     mass: 7450,
     volume: 110.3,
     electrical: '24V (согласно стандартам ЕС)',
@@ -468,6 +487,7 @@ export const TRAILER_DATA: TrailerSpec[] = [
     roof: 'Шторный механизм, усиленная крыша',
     superstructure: 'Система WM Lock (237 точек крепления), 22 кармана под коники, рукомойник 30л',
     category: 'curtain-4',
+    source: 'Д. Семёнов',
     from: null
   },
   {
@@ -475,9 +495,9 @@ export const TRAILER_DATA: TrailerSpec[] = [
     foto: '/sotrans4.png',
     brand: 'SOTRANS',
     type: '4 осный',
-    priceSum: '',
-    priceUsd: null,
-    priceR: null,
+    priceSum: '813 086 090',
+    priceUsd: 68110,
+    priceR: 5100000,
     mass: 8800,
     volume: 110,
     electrical: 'Aspöck (Австрия) 24V',
@@ -491,6 +511,7 @@ export const TRAILER_DATA: TrailerSpec[] = [
     roof: 'Сдвижная крыша, тент высокой плотности (900 г/м²)',
     superstructure: 'Стальная передняя стенка, алюминиевые ворота, стальные борта (опция)',
     category: 'curtain-4',
+    source: 'Д. Семёнов',
     from: null
   },
   {
@@ -498,7 +519,7 @@ export const TRAILER_DATA: TrailerSpec[] = [
     foto: '/fliegl4.png',
     brand: 'FLIEGL',
     type: '4 осный',
-    priceSum: '',
+    priceSum: 'н.д.',
     priceUsd: null,
     priceR: null,
     mass: 7200,
@@ -514,6 +535,7 @@ export const TRAILER_DATA: TrailerSpec[] = [
     roof: 'Сдвижной механизм крыши Fliegl Blitz, тент 900 г/м²',
     superstructure: 'Рама со скошенным передним краем (Fliegl Chassis), алюм. ворота',
     category: 'curtain-4',
+    source: 'Д. Семёнов',
     from: null
   },
   {
@@ -521,9 +543,9 @@ export const TRAILER_DATA: TrailerSpec[] = [
     foto: '/cimc4.png',
     brand: 'CIMC',
     type: '4 осный',
-    priceSum: '',
-    priceUsd: null,
-    priceR: null,
+    priceSum: '721 414 619 сум',
+    priceUsd: 60430,
+    priceR: 4525000,
     mass: 8700,
     volume: 110,
     electrical: 'LED 24V (сертифицировано для РФ и ЕС)',
@@ -537,6 +559,7 @@ export const TRAILER_DATA: TrailerSpec[] = [
     roof: 'Сдвижной механизм (европейского типа), тент 900 г/м²',
     superstructure: 'Стальная передняя стенка, алюминиевые ворота, пол 30 мм, стальные стойки',
     category: 'curtain-4',
+    source: 'Д. Семёнов',
     from: null
   },
   {
@@ -544,7 +567,7 @@ export const TRAILER_DATA: TrailerSpec[] = [
     foto: '/kaile4.png',
     brand: 'KAILE',
     type: '4 осный',
-    priceSum: '',
+    priceSum: 'н.д.',
     priceUsd: null,
     priceR: null,
     mass: 8700,
@@ -560,6 +583,7 @@ export const TRAILER_DATA: TrailerSpec[] = [
     roof: 'Сдвижная крыша, тент бок 900 г/м², крыша 650 г/м²',
     superstructure: 'Стальная перед. стенка, алюм. ворота (4 замка), пол 30 мм, коники',
     category: 'curtain-4',
+    source: 'Д. Семёнов',
     from: null
   },
   {
@@ -567,9 +591,9 @@ export const TRAILER_DATA: TrailerSpec[] = [
     foto: '/guttrailer4.png',
     brand: 'GUT TRAILER',
     type: '4 осный',
-    priceSum: '',
-    priceUsd: null,
-    priceR: null,
+    priceSum: '837 000 387 сум',
+    priceUsd: 70113,
+    priceR: 5250000,
     mass: 8100,
     volume: 110,
     electrical: 'Aspöck (Австрия) 24V в герметичном исполнении / ADR standard',
@@ -583,14 +607,20 @@ export const TRAILER_DATA: TrailerSpec[] = [
     roof: 'Сдвижной механизм Versus (Бельгия), тент 900 г/м²',
     superstructure: 'Стальная передняя стенка, алюм. ворота, рама из стали Strenx (Швеция)',
     category: 'curtain-4',
+    source: 'Д. Семёнов',
     from: null
   },
+
+
+
+
+
   {
     id: 1,
     foto: '/kuat3.png',
-    brand: 'VOLLKRAFT (UAT)',
+    brand: 'VOLLKRAFT',
     type: '3 осная',
-    priceSum: '352 800 000',
+    priceSum: '352 800 000 сум',
     priceUsd: 29150,
     priceR: 2189212,
     mass: 5500,
@@ -606,6 +636,7 @@ export const TRAILER_DATA: TrailerSpec[] = [
     roof: '—',
     superstructure: 'Рама с 6 балками и 12 съемными замками LAXO',
     category: 'container-3',
+    source: 'Д. Семёнов',
     from: null
   },
   {
@@ -613,7 +644,7 @@ export const TRAILER_DATA: TrailerSpec[] = [
     foto: '/ktonar3.png',
     brand: 'TONAR',
     type: '3 осная',
-    priceSum: '',
+    priceSum: 'н.д.',
     priceUsd: null,
     priceR: null,
     mass: 5700,
@@ -629,6 +660,7 @@ export const TRAILER_DATA: TrailerSpec[] = [
     roof: 'Контейнерная платформа открытого типа',
     superstructure: 'Платформа для перевозки контейнеров',
     category: 'container-3',
+    source: 'Д. Семёнов',
     from: null
   },
   {
@@ -636,9 +668,9 @@ export const TRAILER_DATA: TrailerSpec[] = [
     foto: '/kkrone3.png',
     brand: 'KRONE',
     type: '3 осная',
-    priceSum: '',
-    priceUsd: null,
-    priceR: null,
+    priceSum: '636 120 294 сум',
+    priceUsd: 53286,
+    priceR: 3990000,
     mass: 5440,
     volume: "20, 2x20, 30, 40, 45 (универсальное шасси)",
     electrical: '24V, освещение Hella / Krone standard',
@@ -652,6 +684,7 @@ export const TRAILER_DATA: TrailerSpec[] = [
     roof: 'Контейнерная платформа',
     superstructure: 'Рама Gooseneck, фитинговые замки',
     category: 'container-3',
+    source: 'Д. Семёнов',
     from: null
   },
   {
@@ -659,9 +692,9 @@ export const TRAILER_DATA: TrailerSpec[] = [
     foto: '/korthaus3.png',
     brand: 'ORTHAUS',
     type: '3 осная',
-    priceSum: '',
-    priceUsd: null,
-    priceR: null,
+    priceSum: '653 657 445 сум',
+    priceUsd: 54755,
+    priceR: 4100000,
     mass: 4800,
     volume: '40 ft (стандартные и морские контейнеры)',
     electrical: '24V, светоотражающая лента ECE 104',
@@ -675,6 +708,7 @@ export const TRAILER_DATA: TrailerSpec[] = [
     roof: 'Контейнерная платформа',
     superstructure: 'Платформа с 8 швартовочными кольцами',
     category: 'container-3',
+    source: 'Д. Семёнов',
     from: null
   },
   {
@@ -682,9 +716,9 @@ export const TRAILER_DATA: TrailerSpec[] = [
     foto: '/kgrunwald3.png',
     brand: 'GRUNWALD',
     type: '3 осная',
-    priceSum: '547 536 915',
-    priceUsd: 45241,
-    priceR: 3397672,
+    priceSum: 'н.д.',
+    priceUsd: null,
+    priceR: null,
     mass: 5200,
     volume: "1x20', 2x20', 1x30', 1x40', 1x40' HC",
     electrical: '24V (согласно регламенту ЕАЭС)',
@@ -698,6 +732,7 @@ export const TRAILER_DATA: TrailerSpec[] = [
     roof: 'Контейнерная платформа',
     superstructure: '12 фитинговых замков, съемная рабочая площадка',
     category: 'container-3',
+    source: 'Д. Семёнов',
     from: null
   },
   {
@@ -705,7 +740,7 @@ export const TRAILER_DATA: TrailerSpec[] = [
     foto: '/kfliegl3.png',
     brand: 'FLIEGL',
     type: '3 осная',
-    priceSum: '',
+    priceSum: 'н.д.',
     priceUsd: null,
     priceR: null,
     mass: 4400,
@@ -721,6 +756,7 @@ export const TRAILER_DATA: TrailerSpec[] = [
     roof: 'Контейнерная платформа',
     superstructure: 'Выдвижная рама (тип 1 и тип 2)',
     category: 'container-3',
+    source: 'Д. Семёнов',
     from: null
   },
   {
@@ -728,7 +764,7 @@ export const TRAILER_DATA: TrailerSpec[] = [
     foto: '/kcimc3.png',
     brand: 'CIMC',
     type: '3 осная',
-    priceSum: '',
+    priceSum: 'н.д.',
     priceUsd: null,
     priceR: null,
     mass: 6500,
@@ -744,6 +780,7 @@ export const TRAILER_DATA: TrailerSpec[] = [
     roof: 'Контейнерная платформа',
     superstructure: '12 выдвижных ISO замков, шасси JOST E100',
     category: 'container-3',
+    source: 'Д. Семёнов',
     from: null
   },
   {
@@ -751,7 +788,7 @@ export const TRAILER_DATA: TrailerSpec[] = [
     foto: '/kgut-trailer3.png',
     brand: 'GUT TRAILER',
     type: '3 осная',
-    priceSum: '',
+    priceSum: 'н.д.',
     priceUsd: null,
     priceR: null,
     mass: 8500,
@@ -767,6 +804,7 @@ export const TRAILER_DATA: TrailerSpec[] = [
     roof: 'Колесная платформа',
     superstructure: 'Ниши для колес (100 мм), съемные трапы, алюм. борта (400 мм)',
     category: 'container-3',
+    source: 'Д. Семёнов',
     from: null
   },
 
@@ -775,7 +813,7 @@ export const TRAILER_DATA: TrailerSpec[] = [
   {
     id: 1,
     foto: '/kuat4.png',
-    brand: 'VOLLKRAFT (UAT)',
+    brand: 'VOLLKRAFT',
     type: '4 осная',
     priceSum: '425 600 000',
     priceUsd: 35166,
@@ -793,6 +831,7 @@ export const TRAILER_DATA: TrailerSpec[] = [
     roof: 'Контейнерная платформа',
     superstructure: '12 фитинговых замков LAXO, 6 усиленных балок',
     category: 'container-4',
+    source: 'Д. Семёнов',
     from: null
   },
 
@@ -801,9 +840,9 @@ export const TRAILER_DATA: TrailerSpec[] = [
     foto: '/ktonar4.png',
     brand: 'TONAR',
     type: '4 осная',
-    priceSum: '',
-    priceUsd: null,
-    priceR: null,
+    priceSum: '510 171 664 сум',
+    priceUsd: 42735,
+    priceR: 3200000,
     mass: 5120,
     volume: "40', 40' HighCube",
     electrical: '24V влагозащищенное (РФ стандарт)',
@@ -817,6 +856,7 @@ export const TRAILER_DATA: TrailerSpec[] = [
     roof: 'Контейнерная платформа',
     superstructure: 'Фитинговые замки 40ft',
     category: 'container-4',
+    source: 'Д. Семёнов',
     from: null
   },
 
@@ -825,9 +865,9 @@ export const TRAILER_DATA: TrailerSpec[] = [
     foto: '/kbonum4.png',
     brand: 'BONUM',
     type: '4 осная',
-    priceSum: '519 959 583 сум',
-    priceUsd: 43081,
-    priceR: 3245000,
+    priceSum: '485 460 224 сум',
+    priceUsd: 40665,
+    priceR: 3045000,
     mass: 5800,
     volume: "1x20', 2x20', 1x40' HC",
     electrical: 'Aspoeck / Hella / Ermax 24V',
@@ -841,6 +881,7 @@ export const TRAILER_DATA: TrailerSpec[] = [
     roof: 'Открытая платформа',
     superstructure: '6 балок с фитинговыми замками',
     category: 'container-4',
+    source: 'Д. Семёнов',
     from: 'https://www.bonum-trailer.ru/kategorii/kontejnerovozyi/'
   },
 
@@ -871,9 +912,9 @@ export const TRAILER_DATA: TrailerSpec[] = [
     foto: '/korthaus4.png',
     brand: 'ORTHAUS',
     type: '4 осная',
-    priceSum: '745 573 600',
-    priceUsd: 61604,
-    priceR: 4626560,
+    priceSum: '688 731 747 сум',
+    priceUsd: 57693,
+    priceR: 4320000,
     mass: 5900,
     volume: "20ft, 40ft, 45ft HC",
     electrical: 'SMARTBOARD 24V',
@@ -887,6 +928,7 @@ export const TRAILER_DATA: TrailerSpec[] = [
     roof: 'Контейнерная платформа',
     superstructure: 'JOST замки',
     category: 'container-4',
+    source: 'Д. Семёнов',
     from: null
   },
 
@@ -895,9 +937,9 @@ export const TRAILER_DATA: TrailerSpec[] = [
     foto: '/kkoluman4.png',
     brand: 'KOLUMAN',
     type: '4 осная',
-    priceSum: '777 989 843',
-    priceUsd: 64283,
-    priceR: 4827757,
+    priceSum: '485 460 224 сум',
+    priceUsd: 40665,
+    priceR: 3045000,
     mass: 6250,
     volume: "1x20', 40ft HC",
     electrical: '24V РФ/ЕС',
@@ -911,6 +953,7 @@ export const TRAILER_DATA: TrailerSpec[] = [
     roof: 'Контейнерная платформа',
     superstructure: 'S700 рама',
     category: 'container-4',
+    source: 'Д. Семёнов',
     from: null
   },
 
@@ -919,9 +962,9 @@ export const TRAILER_DATA: TrailerSpec[] = [
     foto: '/kgrunwald4.png',
     brand: 'GRUNWALD',
     type: '4 осная',
-    priceSum: '618 826 088',
-    priceUsd: 51131,
-    priceR: 3840020,
+    priceSum: '608 698 567 сум',
+    priceUsd: 50989,
+    priceR: 3818000,
     mass: 5900,
     volume: "1x20', 1x40' HC",
     electrical: '24V monitoring system',
@@ -935,39 +978,42 @@ export const TRAILER_DATA: TrailerSpec[] = [
     roof: 'Контейнерная платформа',
     superstructure: '12 фитинговых замков',
     category: 'container-4',
+    source: 'Д. Семёнов',
     from: null
   },
 
-  // {
-  //   id: 8,
-  //   foto: '/wagnermaier.png',
-  //   brand: 'Wagnermaier',
-  //   type: '4 осная',
-  //   priceSum: null,
-  //   priceUsd: null,
-  //   mass: 7450,
-  //   volume: '110.3',
-  //   electrical: '24V EU',
-  //   braking: 'TSR дисковые',
-  //   loadCapacity: '40.5 т',
-  //   dimensions: '16370 мм',
-  //   suspension: 'ECAS',
-  //   axleBrand: 'SAF INTRA',
-  //   painting: 'KTL coating',
-  //   tires: '385/65R22.5',
-  //   roof: 'шторный механизм',
-  //   superstructure: 'WM Lock system',
-  //   category: 'curtain-4',
-  // },
+  {
+    id: 8,
+    foto: '/wagnermaier.png',
+    brand: 'Wagnermaier',
+    type: '4 осная',
+    priceSum: 'н.д.',
+    priceUsd: null,
+    mass: 7450,
+    volume: '110.3',
+    electrical: '24V EU',
+    braking: 'TSR дисковые',
+    loadCapacity: '40.5 т',
+    dimensions: '16370 мм',
+    suspension: 'ECAS',
+    axleBrand: 'SAF INTRA',
+    painting: 'KTL coating',
+    tires: '385/65R22.5',
+    roof: 'шторный механизм',
+    superstructure: 'WM Lock system',
+    category: 'curtain-4',
+    source: 'Д. Семёнов',
+    from: null
+  },
 
   {
     id: 9,
     foto: '/ksotrans4.png',
     brand: 'SOTRANS',
     type: '4 осная',
-    priceSum: '',
-    priceUsd: null,
-    priceR: null,
+    priceSum: '510 171 664 сум',
+    priceUsd: 42735,
+    priceR: 3200000,
     mass: 5800,
     volume: '40ft HC',
     electrical: '24V waterproof',
@@ -981,6 +1027,7 @@ export const TRAILER_DATA: TrailerSpec[] = [
     roof: 'контейнерная платформа',
     superstructure: 'фитинговые замки',
     category: 'container-4',
+    source: 'Д. Семёнов',
     from: null
   },
 
@@ -989,7 +1036,7 @@ export const TRAILER_DATA: TrailerSpec[] = [
     foto: '/kcmc4.png',
     brand: 'CIMC',
     type: '4 осная',
-    priceSum: '',
+    priceSum: 'н.д.',
     priceUsd: null,
     priceR: null,
     mass: 8000,
@@ -1005,6 +1052,7 @@ export const TRAILER_DATA: TrailerSpec[] = [
     roof: 'контейнерная платформа',
     superstructure: 'ISO locks 12 pcs',
     category: 'container-4',
+    source: 'Д. Семёнов',
     from: null
   },
 
@@ -1013,9 +1061,9 @@ export const TRAILER_DATA: TrailerSpec[] = [
     foto: '/kguttrailer4.png',
     brand: 'GUT TRAILER',
     type: '4 осная',
-    priceSum: '',
-    priceUsd: null,
-    priceR: null,
+    priceSum: '618 583 143 сум',
+    priceUsd: 51817,
+    priceR: 3880000,
     mass: 5880,
     volume: '40ft / 45ft HC',
     electrical: '24V explosion proof',
@@ -1029,6 +1077,7 @@ export const TRAILER_DATA: TrailerSpec[] = [
     roof: 'контейнерная платформа',
     superstructure: '6 ISO locks',
     category: 'container-4',
+    source: 'Д. Семёнов',
     from: null
   },
 
@@ -1054,6 +1103,7 @@ export const TRAILER_DATA: TrailerSpec[] = [
     tires: '385/55 R22.5 (6+1 шт)',
     superstructure: 'Сэндвич-панели + Thermo King SLX 300',
     category: 'reefer-3',
+    source: 'Д. Семёнов',
     from: null
   },
   {
@@ -1061,9 +1111,9 @@ export const TRAILER_DATA: TrailerSpec[] = [
     brand: 'TONAR',
     type: '3-х осный',
     foto: '/reftonar.png',
-    priceSum: '854 857 554 сум',
-    priceUsd: 70241,
-    priceR: 5275212,
+    priceSum: '833 572 671 сум',
+    priceUsd: 69826,
+    priceR: 5228500,
     mass: 8320,
     volume: 85,
     electrical: '24V (стандарт системы Тонар)',
@@ -1076,6 +1126,7 @@ export const TRAILER_DATA: TrailerSpec[] = [
     tires: 'Шины 385/65 R22.5',
     superstructure: 'Изотермический кузов + ХОУ',
     category: 'reefer-3',
+    source: 'Д. Семёнов',
     from: null
   },
   // {
@@ -1092,9 +1143,9 @@ export const TRAILER_DATA: TrailerSpec[] = [
     brand: 'KRONE',
     type: '3-х осный',
     foto: '/refkrone.png',
-    priceSum: 'По запросу',
-    priceUsd: null,
-    priceR: null,
+    priceSum: '1 769 657 961 сум',
+    priceUsd: 148239,
+    priceR: 11100000,
     mass: 8360,
     volume: 87,
     electrical: 'Стандартное 24В, телематика KRONE',
@@ -1107,6 +1158,7 @@ export const TRAILER_DATA: TrailerSpec[] = [
     tires: 'Пневмоподвеska, стандартные шины',
     superstructure: 'Сэндвич-панели + телематика KRONE',
     category: 'reefer-3',
+    source: 'Д. Семёнов',
     from: null
   },
   {
@@ -1114,9 +1166,9 @@ export const TRAILER_DATA: TrailerSpec[] = [
     brand: 'ORTHAUS',
     type: '3-х осный',
     foto: '/reforthaus.png',
-    priceSum: 'По запросу',
-    priceUsd: null,
-    priceR: null,
+    priceSum: '1 187 743 406 сум',
+    priceUsd: 99494,
+    priceR: 7450000,
     mass: 8000,
     volume: 83,
     electrical: '24 В, LED (Aspöck Europoint)',
@@ -1129,6 +1181,7 @@ export const TRAILER_DATA: TrailerSpec[] = [
     tires: '385/65 R22.5 (Pirelli/Continental)',
     superstructure: 'Сэндвич-панели (под ХОУ)',
     category: 'reefer-3',
+    source: 'Д. Семёнов',
     from: null
   },
   {
@@ -1136,9 +1189,9 @@ export const TRAILER_DATA: TrailerSpec[] = [
     brand: 'GRUNWALD',
     type: '3-х осный',
     foto: '/refgrunwald.png',
-    priceSum: '1 327 261 859 сум',
-    priceUsd: 109057,
-    priceR: 8190357,
+    priceSum: '1 289 777 739 сум',
+    priceUsd: 108041,
+    priceR: 8090000,
     mass: 8000,
     volume: 84,
     electrical: '24 В, стандарт',
@@ -1151,6 +1204,7 @@ export const TRAILER_DATA: TrailerSpec[] = [
     tires: '385/65 R22.5',
     superstructure: 'Сэндвич (стеклопластик + XPS)',
     category: 'reefer-3',
+    source: 'Д. Семёнов',
     from: null
   },
   {
@@ -1158,9 +1212,9 @@ export const TRAILER_DATA: TrailerSpec[] = [
     brand: 'FLIEGL',
     type: '3-х осный',
     foto: '/reffliegl.png',
-    priceSum: '1 040 000 000 сум',
-    priceUsd: 85250,
-    priceR: 6402413,
+    priceSum: 'н.д.',
+    priceUsd: null,
+    priceR: null,
     mass: 8200,
     volume: 88,
     electrical: '24V, ISO разъемы, LED освещение',
@@ -1173,6 +1227,7 @@ export const TRAILER_DATA: TrailerSpec[] = [
     tires: '385/65 R22.5 (6+1 шт)',
     superstructure: 'ХОУ (Carrier / Thermo King)',
     category: 'reefer-3',
+    source: 'Д. Семёнов',
     from: null
   },
   {
@@ -1180,7 +1235,7 @@ export const TRAILER_DATA: TrailerSpec[] = [
     brand: 'CIMC',
     type: '3-х осный',
     foto: '/refcmc.png',
-    priceSum: 'По запросу',
+    priceSum: 'н.д.',
     priceUsd: null,
     priceR: null,
     mass: 8600,
@@ -1195,6 +1250,7 @@ export const TRAILER_DATA: TrailerSpec[] = [
     tires: 'Усиленные для тяжелых условий',
     superstructure: 'Изотермический кузов CIMC',
     category: 'reefer-3',
+    source: 'Д. Семёнов',
     from: null
   },
   {
@@ -1202,9 +1258,9 @@ export const TRAILER_DATA: TrailerSpec[] = [
     brand: 'KAILE',
     type: '3-х осный',
     foto: '/refkaile.png',
-    priceSum: 'По запросу',
-    priceUsd: null,
-    priceR: null,
+    priceSum: '1 296 541 340 сум',
+    priceUsd: 108607,
+    priceR: 8132424,
     mass: 8600,
     volume: 84,
     electrical: 'LED 24V Phillips, 4 фонаря внутри',
@@ -1217,6 +1273,7 @@ export const TRAILER_DATA: TrailerSpec[] = [
     tires: '385/65R22.5 алюминиевые диски',
     superstructure: 'Carrier Vector 1550 + паллетный ящик',
     category: 'reefer-3',
+    source: 'Д. Семёнов',
     from: null
   }
 ];

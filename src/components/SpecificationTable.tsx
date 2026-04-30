@@ -1,5 +1,6 @@
 import React, { useRef, useState } from 'react';
 import { TrailerSpec } from '../types';
+import { ExternalLink } from 'lucide-react'; // Link ikonkasi uchun
 
 export const SpecificationTable = ({ data }: { data: TrailerSpec[] }) => {
   const scrollRef = useRef<HTMLDivElement>(null);
@@ -31,7 +32,7 @@ export const SpecificationTable = ({ data }: { data: TrailerSpec[] }) => {
     <div className="bg-white rounded-[10px] md:rounded-[10px] border border-slate-200 shadow-sm overflow-hidden mb-8 md:mb-12 select-none">
       <div className="p-4 md:p-8 border-b border-slate-100 flex flex-col md:flex-row items-start md:items-center justify-between gap-4 bg-white">
         <h4 className="text-lg md:text-xl font-black text-[#1E3A5F]  tracking-tighter ">
-          Технические Характеристики
+          Технические xарактеристики
         </h4>
         <div className="flex items-center gap-2 px-3 py-1.5 md:px-4 md:py-2 bg-slate-50 rounded-lg md:rounded-xl text-[9px] md:text-[11px] font-black text-slate-500 uppercase">
           <span className="hidden sm:inline">Сравнение всех моделей в категории</span>
@@ -47,7 +48,7 @@ export const SpecificationTable = ({ data }: { data: TrailerSpec[] }) => {
         onMouseMove={handleMouseMove}
         className={`overflow-x-auto touch-pan-x scrollbar-thin scrollbar-thumb-slate-200 ${isDragging ? 'cursor-grabbing' : 'cursor-grab'}`}
       >
-        <table className="w-full text-left border-separate border-spacing-0 min-w-[1200px] lg:min-w-[2200px] border-l border-t border-slate-100">
+        <table className="w-full text-left border-separate border-spacing-0 min-w-[1200px] lg:min-w-[2400px] border-l border-t border-slate-100">
           <thead>
             <tr className="bg-slate-50/80">
               {/* Sticky ustunlar: Mobil ekran kengligiga qarab left qiymatlari */}
@@ -66,6 +67,8 @@ export const SpecificationTable = ({ data }: { data: TrailerSpec[] }) => {
               <th className="p-3 md:p-5 text-[10px] md:text-[12px] font-black text-slate-800 uppercase border-r border-b border-slate-200">Оси</th>
               <th className="p-3 md:p-5 text-[10px] md:text-[12px] font-black text-slate-800 uppercase border-r border-b border-slate-200">Окраска</th>
               <th className="p-3 md:p-5 text-[10px] md:text-[12px] font-black text-slate-800 uppercase border-r border-b border-slate-200">Надстройка</th>
+              {/* Yangi ustun - Источник */}
+              <th className="p-3 md:p-5 text-[10px] md:text-[12px] font-black text-[#3B82F6] uppercase border-r border-b border-slate-200">Источник</th>
             </tr>
           </thead>
           <tbody>
@@ -93,6 +96,24 @@ export const SpecificationTable = ({ data }: { data: TrailerSpec[] }) => {
                 <td className="p-3 md:p-5 text-[10px] md:text-[13px] font-bold text-slate-700 border-r border-b border-slate-100">{item.axleBrand}</td>
                 <td className="p-3 md:p-5 text-[10px] md:text-[13px] font-bold text-slate-700 max-w-[150px] md:max-w-[220px] leading-tight border-r border-b border-slate-100">{item.painting}</td>
                 <td className="p-3 md:p-5 text-[10px] md:text-[13px] font-bold text-slate-700 border-r border-b border-slate-100">{item.superstructure}</td>
+                
+                {/* Oxirgi ustun ma'lumoti */}
+                <td className="p-3 md:p-5 border-r border-b border-slate-100 text-center">
+                  <span>{item.source}</span>
+                  {item.from ? (
+                    <a
+                      href={item.from}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-2 px-3 py-1.5 bg-blue-50 text-blue-600 rounded-lg text-[10px] md:text-[12px] font-black uppercase hover:bg-blue-600 hover:text-white transition-all"
+                    >
+                      Источник
+                      <ExternalLink size={12} />
+                    </a>
+                  ) : (
+                    <span className="text-slate-300"></span>
+                  )}
+                </td>
               </tr>
             ))}
           </tbody>

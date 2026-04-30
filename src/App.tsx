@@ -36,7 +36,7 @@ export default function App() {
             {/* text-4xl dan text-7xl gacha o'zgaradi */}
             <h3 className="text-3xl sm:text-3xl md:text-4xl lg:text-4xl font-black text-[#1E3A5F]  tracking-tighter leading-[0.9] mb-6">
               Анализ <br className="sm:hidden" />
-              <span className="">Рынка 2026</span>
+              <span className="">рынка 2026 (янв-март)</span>
             </h3>
           </FadeIn>
 

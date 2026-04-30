@@ -16,6 +16,34 @@ interface PriceComparisonChartProps {
   activeCategory: string;
 }
 
+const CustomTooltip = ({ active, payload }: any) => {
+  if (active && payload && payload.length) {
+    const data = payload[0].payload;
+    return (
+      <div className="bg-white p-4 md:p-5 rounded-[24px] shadow-[0_20px_50px_rgba(0,0,0,0.15)] border-none outline-none z-50">
+        <div className="flex flex-col gap-1">
+          <div className="text-slate-900 text-xs font-black uppercase mb-1">{data.name}</div>
+          <div className="flex flex-col">
+            <span className="text-slate-400 text-[10px] font-bold uppercase">Цена :</span>
+            <span className="text-[#1E3A5F] text-lg font-black leading-tight">
+              {data.priceUsd?.toLocaleString()}
+            </span>
+          </div>
+          {data.priceR && (
+            <div className="text-slate-400 text-xs font-bold">{data.priceR.toLocaleString()} ₽</div>
+          )}
+          {data.source && (
+            <div className="mt-2 pt-2 border-t border-slate-50 text-[9px] md:text-[10px] text-blue-500 font-black flex items-center gap-1 uppercase tracking-wider">
+              Нажмите для перехода <ExternalLink size={10} />
+            </div>
+          )}
+        </div>
+      </div>
+    );
+  }
+  return null;
+};
+
 export const PriceComparisonChart = ({ data, activeCategory }: PriceComparisonChartProps) => {
   const [isMobile, setIsMobile] = useState(false);
 
@@ -44,24 +72,26 @@ export const PriceComparisonChart = ({ data, activeCategory }: PriceComparisonCh
 
     return (
       <g>
+        {/* Dollarda narxi - Tepada (Belgisiz) */}
         <text
           x={x + width / 2}
-          y={y - 22}
+          y={y - 24} // Dollarni tepaga ko'tardik
           fill="#1E3A5F"
           textAnchor="middle"
-          fontSize={isMobile ? 10 : 13}
-          fontWeight="900"
+          className="select-none font-black"
+          fontSize={isMobile ? 8 : 12}
         >
-          {value ? `$${value.toLocaleString()}` : ''}
+          {value ? value.toLocaleString() : ''}
         </text>
+        {/* Rublda narxi - Pastda (Dollar tagida) */}
         {item.priceR && (
           <text
             x={x + width / 2}
             y={y - 8}
-            fill="#64748b"
+            fill="#94A3B8"
             textAnchor="middle"
-            fontSize={isMobile ? 8 : 10}
-            fontWeight="700"
+            className="select-none font-bold"
+            fontSize={isMobile ? 7 : 10}
           >
             {`${item.priceR.toLocaleString()} ₽`}
           </text>
@@ -71,37 +101,42 @@ export const PriceComparisonChart = ({ data, activeCategory }: PriceComparisonCh
   };
 
   return (
-    <div className="bg-white p-6 md:p-10 rounded-[20px] border border-slate-100 shadow-sm mb-8 md:mb-12">
-      <div className="flex items-center justify-between mb-10 md:mb-14">
-        <div className="flex items-center gap-4">
-          <div className="w-12 h-12 md:w-14 md:h-14 bg-emerald-50 rounded-2xl flex items-center justify-center shadow-inner shrink-0">
-            <CircleDollarSign className="w-6 h-6 md:w-7 md:h-7 text-emerald-500" />
+    <div className="bg-white p-4 md:p-10 rounded-[24px] md:rounded-[32px] border border-slate-100 shadow-sm mb-8 md:mb-12 overflow-hidden">
+      <div className="flex flex-row items-center justify-between mb-6 md:mb-14">
+        <div className="flex items-center gap-2 md:gap-4">
+          <div className="w-9 h-9 md:w-14 md:h-14 bg-emerald-50 rounded-xl md:rounded-2xl flex items-center justify-center shadow-inner shrink-0">
+            <CircleDollarSign className="w-5 h-5 md:w-7 md:h-7 text-emerald-500" />
           </div>
           <div>
-            <h4 className="text-lg md:text-2xl font-black text-[#1E3A5F] tracking-tighter leading-none mb-1">
+            <h4 className="text-sm md:text-2xl font-black text-[#1E3A5F] tracking-tighter leading-none mb-1">
               Сравнение цен
             </h4>
-            <p className="text-[10px] md:text-xs font-bold text-slate-400  tracking-[0.2em]">
-              Нажмите на колонку для перехода к источнику
+            <p className="text-[7px] md:text-xs font-bold text-slate-400 uppercase tracking-widest">
+              Нажмите для перехода
             </p>
           </div>
         </div>
 
-        <div className="relative">
+        <div className="relative shrink-0">
           <img
-            className="w-36 md:w-64 h-auto object-contain transition-all duration-700 ease-in-out hover:scale-105 drop-shadow-2xl"
+            className="w-20 md:w-60 h-auto object-contain drop-shadow-2xl"
             src={categoryImages[activeCategory] || '/uat3os.png'}
             alt="Trailer Type"
           />
         </div>
       </div>
 
-      <div className="h-[350px] md:h-[450px] w-full">
+      <div className="h-[380px] md:h-[450px] w-full">
         {chartData.length > 0 ? (
           <ResponsiveContainer width="100%" height="100%">
             <BarChart
               data={chartData}
-              margin={{ top: 50, right: 10, left: isMobile ? -10 : 20, bottom: 40 }}
+              margin={{ 
+                top: 40, 
+                right: isMobile ? 10 : 20, 
+                left: isMobile ? -25 : 10, 
+                bottom: isMobile ? 65 : 30 
+              }}
             >
               <defs>
                 <linearGradient id="barGradient" x1="0" y1="0" x2="0" y2="1">
@@ -115,57 +150,37 @@ export const PriceComparisonChart = ({ data, activeCategory }: PriceComparisonCh
                 dataKey="name"
                 axisLine={false}
                 tickLine={false}
-                interval={0} // Hamma brendlar chiqishi uchun
-                angle={0}    // Tug'ri (gorizontal) holat
-                textAnchor="middle" // O'rtaga tekislash
+                interval={0}
+                angle={isMobile ? -45 : 0}
+                textAnchor={isMobile ? "end" : "middle"}
+                height={isMobile ? 90 : 30}
                 tick={{
-                  fill: '#475569',
-                  fontSize: isMobile ? 8 : 12, // Shriftni biroz kichraytirdik, sig'ishi uchun
+                  fill: '#1E293B', // To'q brand ranglari
+                  fontSize: isMobile ? 8 : 11,
                   fontWeight: 900
                 }}
               />
 
               <YAxis
+                hide={isMobile}
                 axisLine={false}
                 tickLine={false}
-                tick={{ fill: '#94A3B8', fontSize: isMobile ? 9 : 12, fontWeight: 700 }}
-                tickFormatter={(value) => `$${value.toLocaleString()}`}
-                width={isMobile ? 50 : 90}
+                tick={{ fill: '#CBD5E1', fontSize: 11, fontWeight: 700 }}
+                tickFormatter={(value) => value.toLocaleString()} // Bu yerdan ham $ olib tashlandi
+                width={80}
               />
 
               <Tooltip
-                cursor={{ fill: 'rgba(59, 130, 246, 0.05)', radius: 12 }}
-                contentStyle={{
-                  borderRadius: '24px',
-                  border: 'none',
-                  boxShadow: '0 25px 50px -12px rgb(0 0 0 / 0.15)',
-                  fontSize: '14px',
-                  fontWeight: 900,
-                  padding: '16px 20px'
-                }}
-                formatter={(value: any, name: any, props: any) => {
-                  const rubPrice = props?.payload?.priceR;
-                  const source = props?.payload?.source;
-                  return [
-                    <div key="usd-rub" className="flex flex-col gap-1">
-                      <div className="text-[#1E3A5F] text-base font-black">${value?.toLocaleString()}</div>
-                      {rubPrice && <div className="text-slate-400 text-xs">{rubPrice.toLocaleString()} ₽</div>}
-                      {source && (
-                        <div className="mt-2 pt-2 border-t border-slate-50 text-[10px] text-blue-500 flex items-center gap-1 uppercase tracking-wider">
-                          Нажмите для перехода <ExternalLink size={10} />
-                        </div>
-                      )}
-                    </div>,
-                    'Цена'
-                  ];
-                }}
+                content={<CustomTooltip />}
+                cursor={{ fill: 'rgba(59, 130, 246, 0.04)', radius: 12 }}
+                wrapperStyle={{ outline: 'none', pointerEvents: 'none' }} 
               />
 
               <Bar
                 dataKey="priceUsd"
                 fill="url(#barGradient)"
-                radius={[12, 12, 4, 4]}
-                barSize={isMobile ? 24 : 50}
+                radius={[8, 8, 4, 4]}
+                barSize={isMobile ? 16 : 48}
                 label={renderCustomBarLabel}
                 className="cursor-pointer"
                 onClick={(entry) => {
@@ -177,8 +192,8 @@ export const PriceComparisonChart = ({ data, activeCategory }: PriceComparisonCh
             </BarChart>
           </ResponsiveContainer>
         ) : (
-          <div className="h-full w-full flex items-center justify-center text-slate-400 font-medium ">
-            Нет данных по ценам для этой категории
+          <div className="h-full w-full flex items-center justify-center text-slate-400 font-bold uppercase text-[10px]">
+            Нет данных по ценам
           </div>
         )}
       </div>
