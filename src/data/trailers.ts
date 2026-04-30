@@ -53,7 +53,7 @@ export const TRAILER_DATA: TrailerSpec[] = [
     roof: 'Тент 650-750гр',
     superstructure: 'Металлический пол, металлическая обрешетка',
     category: 'curtain-3',
-    from: null
+    from: 'https://tonardon.ru/polupritsep-shtornyj-tentovannyj-3-osi-tonar-99881'
   },
   {
     id: 3,
@@ -99,16 +99,16 @@ export const TRAILER_DATA: TrailerSpec[] = [
     roof: 'Edscha, PVC тент',
     superstructure: 'Стальная рама, Multilock, алюминиевые двери',
     category: 'curtain-3',
-    from: null
+    from: 'https://int.krone-trailer.com/%D1%80%D1%83%D1%81%D1%81%D0%BA%D0%B8%D0%B9/produkcija/polupricepy-s-bortovoi-platformoi/'
   },
   {
     id: 5,
     foto: '/orthaus3.png',
     brand: 'ORTHAUS',
     type: '3 осный',
-    priceSum: '656 000 000 сум',
-    priceUsd: 53500,
-    priceR: 4017936,
+    priceSum: '660 947 994 сум',
+    priceUsd: 54851,
+    priceR: 4100000,
     mass: 6300,
     volume: '90 - 92',
     electrical: 'Aspock 24V LED',
@@ -122,7 +122,7 @@ export const TRAILER_DATA: TrailerSpec[] = [
     roof: 'Сдвижная крыша Versus, штора 900 гр',
     superstructure: 'Стальная рама, фанера 30мм, двери 270°',
     category: 'curtain-3',
-    from: null
+    from: 'https://orthausrus.ru/stocks/111-orthaus-v3-136m-shtornyj-trehosnyj.html'
   },
   {
     id: 6,
@@ -145,7 +145,7 @@ export const TRAILER_DATA: TrailerSpec[] = [
     roof: 'Сдвижная крыша Edscha, тент 750гр',
     superstructure: 'Алюминиевые борта, фанера 30мм, ворота',
     category: 'curtain-3',
-    from: null
+    from: 'https://koluman.ru/shtornyj-polupriczep-13-6'
   },
   {
     id: 7,
@@ -168,7 +168,7 @@ export const TRAILER_DATA: TrailerSpec[] = [
     roof: 'Тент 900 гр/м2 (боковой) / 680 гр/м2 (крыша)',
     superstructure: 'Сдвижная крыша SESAM, фанера 30мм, алюминиевые ворота, усиленная рама',
     category: 'curtain-3',
-    from: null
+    from: 'https://alphatruck.ru/polupritsepy/gryunvald-samosvalnyye/polupritsep-shtorny-grunwald-grss-6887'
   },
   {
     id: 8,
@@ -191,7 +191,7 @@ export const TRAILER_DATA: TrailerSpec[] = [
     roof: 'Шторный кузов',
     superstructure: 'Ящик инструментов, корзина на 2 колеса, WM Lock',
     category: 'curtain-3',
-    from: null
+    from: 'https://wagnermaier.com/ru/semitrailers/planenauflieger/'
   },
   {
     id: 9,
