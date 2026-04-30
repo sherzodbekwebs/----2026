@@ -93,8 +93,8 @@ export const MarketShareAnalytics = ({ data2025, data2026 }: MarketShareAnalytic
     <div className="mb-12">
       {/* 1. UMUMIY SARLAVHA SECTIONI */}
       <FadeIn className="mb-3 ">
-        <h3 className=" font-black text-[#1E3A5F] uppercase tracking-tighter ">
-          Реализация полуприцепов (3-х и 4-х осных)
+        <h3 className=" font-black text-[#1E3A5F]  tracking-tighter ">
+          Рынок Полуприцепов (3-х и 4-х осных)
         </h3>
 
       </FadeIn>

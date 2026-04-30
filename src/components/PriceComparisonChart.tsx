@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
-import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, Cell } from 'recharts';
-import { CircleDollarSign, ExternalLink } from 'lucide-react'; // ExternalLink qo'shildi
+import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from 'recharts';
+import { CircleDollarSign, ExternalLink } from 'lucide-react';
 import { TrailerSpec } from '../types';
 
 const categoryImages: Record<string, string> = {
@@ -28,14 +28,13 @@ export const PriceComparisonChart = ({ data, activeCategory }: PriceComparisonCh
     return () => window.removeEventListener('resize', handleResize);
   }, []);
 
-  // 1. ChartData'ga 'from' ustunini ham qo'shamiz
   const chartData = data
     .filter(item => item.priceUsd !== null && item.priceUsd !== undefined)
     .map(item => ({
       name: item.brand,
       priceUsd: item.priceUsd as number,
       priceR: item.priceR,
-      source: item.from, // <<-- Manba havolasi
+      source: item.from,
     })).sort((a, b) => b.priceUsd - a.priceUsd);
 
   const renderCustomBarLabel = (props: any) => {
@@ -45,23 +44,23 @@ export const PriceComparisonChart = ({ data, activeCategory }: PriceComparisonCh
 
     return (
       <g>
-        <text 
-          x={x + width / 2} 
-          y={y - 22} 
-          fill="#1E3A5F" 
-          textAnchor="middle" 
-          fontSize={isMobile ? 10 : 13} 
+        <text
+          x={x + width / 2}
+          y={y - 22}
+          fill="#1E3A5F"
+          textAnchor="middle"
+          fontSize={isMobile ? 10 : 13}
           fontWeight="900"
         >
           {value ? `$${value.toLocaleString()}` : ''}
         </text>
         {item.priceR && (
-          <text 
-            x={x + width / 2} 
-            y={y - 8} 
-            fill="#64748b" 
-            textAnchor="middle" 
-            fontSize={isMobile ? 8 : 10} 
+          <text
+            x={x + width / 2}
+            y={y - 8}
+            fill="#64748b"
+            textAnchor="middle"
+            fontSize={isMobile ? 8 : 10}
             fontWeight="700"
           >
             {`${item.priceR.toLocaleString()} ₽`}
@@ -79,10 +78,10 @@ export const PriceComparisonChart = ({ data, activeCategory }: PriceComparisonCh
             <CircleDollarSign className="w-6 h-6 md:w-7 md:h-7 text-emerald-500" />
           </div>
           <div>
-            <h4 className="text-lg md:text-2xl font-black text-[#1E3A5F] uppercase tracking-tighter leading-none mb-1">
+            <h4 className="text-lg md:text-2xl font-black text-[#1E3A5F] tracking-tighter leading-none mb-1">
               Сравнение цен
             </h4>
-            <p className="text-[10px] md:text-xs font-bold text-slate-400 uppercase tracking-[0.2em]">
+            <p className="text-[10px] md:text-xs font-bold text-slate-400  tracking-[0.2em]">
               Нажмите на колонку для перехода к источнику
             </p>
           </div>
@@ -102,34 +101,40 @@ export const PriceComparisonChart = ({ data, activeCategory }: PriceComparisonCh
           <ResponsiveContainer width="100%" height="100%">
             <BarChart
               data={chartData}
-              margin={{ top: 50, right: 10, left: isMobile ? -10 : 20, bottom: 70 }}
+              margin={{ top: 50, right: 10, left: isMobile ? -10 : 20, bottom: 40 }}
             >
               <defs>
                 <linearGradient id="barGradient" x1="0" y1="0" x2="0" y2="1">
-                  <stop offset="0%" stopColor="#00529B" stopOpacity={1} />
-                  <stop offset="100%" stopColor="#1E3A5F" stopOpacity={1} />
+                  <stop offset="0%" stopColor="#3B82F6" stopOpacity={1} />
+                  <stop offset="100%" stopColor="#1D4ED8" stopOpacity={1} />
                 </linearGradient>
               </defs>
               <CartesianGrid strokeDasharray="4 4" vertical={false} stroke="#F1F5F9" />
+
               <XAxis
                 dataKey="name"
                 axisLine={false}
                 tickLine={false}
-                interval={0}
-                angle={-45}
-                textAnchor="end"
-                tick={{ fill: '#475569', fontSize: isMobile ? 10 : 13, fontWeight: 900 }}
+                interval={0} // Hamma brendlar chiqishi uchun
+                angle={0}    // Tug'ri (gorizontal) holat
+                textAnchor="middle" // O'rtaga tekislash
+                tick={{
+                  fill: '#475569',
+                  fontSize: isMobile ? 8 : 12, // Shriftni biroz kichraytirdik, sig'ishi uchun
+                  fontWeight: 900
+                }}
               />
+
               <YAxis
                 axisLine={false}
                 tickLine={false}
                 tick={{ fill: '#94A3B8', fontSize: isMobile ? 9 : 12, fontWeight: 700 }}
                 tickFormatter={(value) => `$${value.toLocaleString()}`}
-                width={isMobile ? 50 : 90} 
+                width={isMobile ? 50 : 90}
               />
-              
+
               <Tooltip
-                cursor={{ fill: 'rgba(30, 58, 95, 0.03)', radius: 12 }}
+                cursor={{ fill: 'rgba(59, 130, 246, 0.05)', radius: 12 }}
                 contentStyle={{
                   borderRadius: '24px',
                   border: 'none',
@@ -138,7 +143,6 @@ export const PriceComparisonChart = ({ data, activeCategory }: PriceComparisonCh
                   fontWeight: 900,
                   padding: '16px 20px'
                 }}
-                // 2. Tooltip ichida manba borligini bildiramiz
                 formatter={(value: any, name: any, props: any) => {
                   const rubPrice = props?.payload?.priceR;
                   const source = props?.payload?.source;
@@ -156,15 +160,14 @@ export const PriceComparisonChart = ({ data, activeCategory }: PriceComparisonCh
                   ];
                 }}
               />
-              
-              {/* 3. Ustunni bosiladigan (clickable) qilamiz */}
+
               <Bar
-                dataKey="priceUsd" 
-                fill="url(#barGradient)" 
-                radius={[12, 12, 4, 4]} 
+                dataKey="priceUsd"
+                fill="url(#barGradient)"
+                radius={[12, 12, 4, 4]}
                 barSize={isMobile ? 24 : 50}
                 label={renderCustomBarLabel}
-                className="cursor-pointer" // Bosish mumkinligini ko'rsatish
+                className="cursor-pointer"
                 onClick={(entry) => {
                   if (entry.source) {
                     window.open(entry.source, '_blank', 'noopener,noreferrer');

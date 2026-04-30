@@ -29,12 +29,12 @@ export default function App() {
           {/* Header */}
           <FadeIn className="mb-6 md:mb-10 flex flex-col items-center text-center">
             <div className="flex items-center gap-2 md:gap-3 mb-4">
-              <h2 className="text-[9px] md:text-[13px] font-black text-[#00529B] uppercase tracking-[0.3em] md:tracking-[0.4em]">
+              <h2 className="text-[9px] md:text-[13px] font-black text-[#00529B]  tracking-[0.3em] md:tracking-[0.4em]">
                 {currentCategory?.label}
               </h2>
             </div>
             {/* text-4xl dan text-7xl gacha o'zgaradi */}
-            <h3 className="text-3xl sm:text-3xl md:text-4xl lg:text-4xl font-black text-[#1E3A5F] uppercase tracking-tighter leading-[0.9] mb-6">
+            <h3 className="text-3xl sm:text-3xl md:text-4xl lg:text-4xl font-black text-[#1E3A5F]  tracking-tighter leading-[0.9] mb-6">
               Анализ <br className="sm:hidden" />
               <span className="">Рынка 2026</span>
             </h3>
