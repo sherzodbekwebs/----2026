@@ -9,6 +9,7 @@ const categoryImages: Record<string, string> = {
   'container-3': '/kuat3.png',
   'container-4': '/kuat4.png',
   'reefer-3': '/ref.png',
+  'flatbed-container': '/vollkraft_bort.png',
 };
 
 interface PriceComparisonChartProps {
@@ -131,11 +132,11 @@ export const PriceComparisonChart = ({ data, activeCategory }: PriceComparisonCh
           <ResponsiveContainer width="100%" height="100%">
             <BarChart
               data={chartData}
-              margin={{ 
-                top: 40, 
-                right: isMobile ? 10 : 20, 
-                left: isMobile ? -25 : 10, 
-                bottom: isMobile ? 65 : 30 
+              margin={{
+                top: 40,
+                right: isMobile ? 10 : 20,
+                left: isMobile ? -25 : 10,
+                bottom: isMobile ? 65 : 30
               }}
             >
               <defs>
@@ -173,7 +174,7 @@ export const PriceComparisonChart = ({ data, activeCategory }: PriceComparisonCh
               <Tooltip
                 content={<CustomTooltip />}
                 cursor={{ fill: 'rgba(59, 130, 246, 0.04)', radius: 12 }}
-                wrapperStyle={{ outline: 'none', pointerEvents: 'none' }} 
+                wrapperStyle={{ outline: 'none', pointerEvents: 'none' }}
               />
 
               <Bar

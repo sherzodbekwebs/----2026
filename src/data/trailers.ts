@@ -3,12 +3,230 @@ import { TrailerSpec, Category } from '../types';
 export const CATEGORIES: Category[] = [
   { id: 'curtain-3', label: 'Шторный полуприцеп 3 осный' },
   { id: 'curtain-4', label: 'Шторный полуприцеп 4 осный' },
-  { id: 'container-3', label: 'Контейнеровоз 3-осный' },
   { id: 'container-4', label: 'Контейнеровоз 4-осный' },
+  { id: 'flatbed-container', label: 'Бортовой полуприцеп' }, // Yangi kategoriya
   { id: 'reefer-3', label: 'Полуприцеп рефрижератор 3 осный' },
 ];
 
 export const TRAILER_DATA: TrailerSpec[] = [
+  {
+    id: 'vollkraft-flatbed-container-3',
+    foto: '/vollkraft_bort.png', // Rasm nomini moslang
+    brand: 'VOLLKRAFT',
+    type: '3-х осный',
+    priceSum: '364 000 000 сум', // Taxminiy narx (broshurada yo'qligi sababli)
+    priceUsd: 30415,             // Taxminiy USD
+    priceR: 2219585,
+    mass: 7600,
+    volume: 23,                  // Ichki o'lchamlari bo'yicha (12.5 x 2.44 x 0.75)
+    electrical: '24V, влагозащищенное исполнение',
+    braking: 'Барабанные усиленные, EBS 2S/2M с RSS и ABS',
+    loadCapacity: '36.4',        // Texnik yuk ko'tarish quvvati
+    dimensions: 'внеш: 12 700 х 2 500 х 2 575 мм; ССУ: 1 250 мм',
+    suspension: 'Пневморессорная, первая ось подъемная (автоматическая)',
+    axleBrand: 'Усиленные (нагрузка до 12.5 тонн на ось)',
+    painting: 'Усиленная сварная стальная конструкция из ST52-3',
+    tires: '385/65 R22.5 (6+1 шт)',
+    roof: '—',
+    superstructure: '12 замков LAXO для контейнеров, 10 откидных бортов, пол рифленый металлический, 8 пар крепежных проушин',
+    category: 'flatbed-container',
+    source: 'Vollkraft',
+    from: null
+  },
+  {
+    id: 'inter-flatbed-3',
+    foto: '/inter_trailer_bort.png', // Rasm nomini o'zingizga moslang
+    brand: 'INTER TRAILER',
+    type: '3-х осный',
+    priceSum: '549 391 136 сум', // Taxminiy hisoblangan
+    priceUsd: 45906,             // 3.35 mln rubl -> USD
+    priceR: 3350000,
+    mass: 7200,
+    volume: 24,
+    electrical: '24V, Светодиодные задние фонари, фитинги Camozzi',
+    braking: 'SORL ABS/EBS, барабанные (L1) или дисковые (BPW/JOST)',
+    loadCapacity: '31.8',
+    dimensions: '12600 х 2550 х 2100 мм',
+    suspension: 'Пневматическая с функцией подъема первой оси',
+    axleBrand: 'L1 / AKKAR / BPW / JOST',
+    painting: 'Дробеструйная обработка + промышленная окраска IRVENT',
+    tires: '385/65 R22.5 (6+1 шт)',
+    roof: '—',
+    superstructure: 'Борта 2 мм, пол 3 мм, ящик DAKEN, рукомойник LOKHEN',
+    category: 'flatbed-container',
+    source: 'Интер Прицеп',
+    from: 'https://interpricep.ru/polupricepy/polupricep-bortovoj-trehosnyj'
+  },
+  {
+    id: 'politrans-flatbed-3',
+    foto: '/politrans_bort.png', // Rasm nomini moslang
+    brand: 'ПОЛИТРАНС',
+    type: '3-х осный',
+    priceSum: '681 387 359 сум', // 4 154 868 ₽ kurs bo'yicha
+    priceUsd: 56936,             // Rubl -> USD
+    priceR: 4154868,
+    mass: 8000,                  // Taxminiy снаряженная масса
+    volume: 27,                  // Platforma o'lchamidan kelib chiqib
+    electrical: '24V, Пневмопривод тормозов с EBS',
+    braking: 'Пневматическая тормозная система с EBS',
+    loadCapacity: '35.2',
+    dimensions: 'дл: 13 640; шир: 2 470; выс: 1 523 мм (погрузочная)',
+    suspension: 'пневматическая',
+    axleBrand: 'L1 / BPW / SAF',
+    painting: 'Высокопрочная легированная сталь с антикоррозийным покрытием',
+    tires: 'односкатные 385/65 R22.5',
+    roof: '—',
+    superstructure: 'Алюминиевые борта, передний щит, инструментальный ящик (2 шт.), выдвижные стойки 1000 мм, настил чечевица',
+    category: 'flatbed-container',
+    source: 'Политранс',
+    from: 'https://politrans.ru/catalog/bortovye/'
+  },
+  {
+    id: 'tonar-flatbed-b3-13k',
+    foto: '/tonar_bort.png', // Rasm nomini moslang
+    brand: 'TONAR',
+    type: '3-х осный',
+    priceSum: '565 790 872 сум', // 3 450 000 ₽ kurs bo'yicha
+    priceUsd: 47277,             // Rubl -> USD
+    priceR: 3450000,
+    mass: 6700,
+    volume: 27,                  // O'rtacha hajmi
+    electrical: '24V, влагозащищенное исполнение',
+    braking: 'Пневматическая, с ABS/EBS',
+    loadCapacity: '31.8',        // 38.5 - 6.7
+    dimensions: 'внутр: 13 625 х 2 480 мм; ССУ: 1 200 мм',
+    suspension: 'зависимая, рычажная с пневморессорами',
+    axleBrand: 'Тонар (передняя подъемная)',
+    painting: 'Высококачественная эмаль',
+    tires: 'бескамерные 385/65 R22.5',
+    roof: '—',
+    superstructure: 'Пол: фанера 27 мм, 8 откидных бортов, 12 съемных коников с корзиной, скобы для крепления (2т)',
+    category: 'flatbed-container',
+    source: 'Тонар',
+    from: 'https://tonar.info/product/bortovoy-polupritsep-tonar-b3-13-k-s-konikami'
+  },
+
+  {
+    id: 'bonum-flatbed-914296-06',
+    foto: '/bonum_bort.png', // Rasm nomini moslang
+    brand: 'BONUM',
+    type: '3-х осный',
+    priceSum: '647 789 549 сум', // Taxminiy bozor narxi (~3 950 000 ₽)
+    priceUsd: 54129,             // Rubl -> USD o'rtacha kursda
+    priceR: 3950000,
+    mass: 5900,
+    volume: 27,                  // Bort balandligiga qarab (13.6 x 2.48 x 0.8)
+    electrical: 'Aspoeck / Hella / Ermax (24V)',
+    braking: 'Пневматическая двухконтурная, дисковые / барабанные',
+    loadCapacity: '34.1',        // 40т - 5.9т (maksimal foydali yuk)
+    dimensions: 'дл: 13 920; шир: 2 550; выс: 2 455 - 2 655 мм',
+    suspension: 'Пневматическая, 3 оси',
+    axleBrand: 'SAF / BPW / HJ / Jost',
+    painting: 'PRIME System (трехступенчатая: дробеструйная обработка, антикоррозийный грунт, премиальная эмаль)',
+    tires: '385/65 R22.5 (6+1 шт)',
+    roof: '—',
+    superstructure: 'Алюминиевые борта (600/800 мм), стаканы под коники 80х80 мм, скрытые проушины для крепления груза',
+    category: 'flatbed-container',
+    source: 'BONUM',
+    from: 'https://www.bonum-trailer.ru/kategorii/polupritsepy-bortovyie/bortovoj-polupricep-914296-06/'
+  },
+  {
+    id: 'wagnermaier-flatbed-13-63',
+    foto: '/wagnermaier_bort.png', // Rasm nomini moslang
+    brand: 'Wagnermaier',
+    type: '3-х осный',
+    priceSum: '672 389 152 сум', // Taxminiy bozor narxi (~4 100 000 ₽)
+    priceUsd: 56184,             // Rubl -> USD o'rtacha kursda
+    priceR: 4100000,
+    mass: 5900,
+    volume: 27,                  // O'lchamlariga ko'ra (13.63 x 2.48 x 0.8)
+    electrical: '24V, модулятор TSR / WABCO',
+    braking: 'Дисковые / Барабанные',
+    loadCapacity: '33.1',        // 39т - 5.9т
+    dimensions: 'внутр: 13 630 х 2 480 мм; борт: 600-800 мм',
+    suspension: 'Пневматическая на коробах',
+    axleBrand: 'SAF INTRA CUSTOM DESIGN / BPW',
+    painting: 'KTL-покрытие (высокая коррозионная стойкость)',
+    tires: '385/65 R22.5 (6+1 шт)',
+    roof: '—',
+    superstructure: 'Высота ССУ 1150 мм, погрузочная высота 1250 мм, усиленное шасси',
+    category: 'flatbed-container',
+    source: 'Wagnermaier',
+    from: 'https://wagnermaier.com/ru/semitrailers/bordwandauflieger-13-63m/'
+  },
+  {
+    id: 'orthaus-flatbed-op3',
+    foto: '/orthaus_bort.png', // Rasm nomini moslang
+    brand: 'ORTHAUS',
+    type: '3-х осный',
+    priceSum: '729 788 226 сум', // Taxminiy bozor narxi (~4 450 000 ₽)
+    priceUsd: 60980,             // Rubl -> USD o'rtacha kursda
+    priceR: 4450000,
+    mass: 7600,
+    volume: 25,                  // O'lchamlari: 13.61 x 2.48 x 0.75
+    electrical: '24V, светоотражающая лента ECE 104 (стандарт)',
+    braking: 'Wabco / Knorr EBS, дисковые 430 мм / барабанные',
+    loadCapacity: '30.9',        // 38.5т - 7.6т
+    dimensions: 'внутр: 13 610 х 2 480 мм; борт: 750 мм',
+    suspension: 'Пневматическая',
+    axleBrand: 'BPW / SAF / ORTHAUS',
+    painting: 'KTL-обработка всей рамы (высокая антикоррозийная защита)',
+    tires: '385/65 R22.5 (Premium: Bridgestone / Pirelli / Michelin)',
+    roof: '—',
+    superstructure: 'Передняя стенка 600 мм (гальванизированная сталь 4 мм), 5 алюм. бортов с каждой стороны, 30 колец для крепления груза',
+    category: 'flatbed-container',
+    source: 'ORTHAUS',
+    from: 'https://orthausrus.ru/product/platform/17-dropside.html'
+  },
+  {
+    id: 'koluman-flatbed-13-6',
+    foto: '/koluman_bort.png', // Rasm nomini moslang
+    brand: 'KOLUMAN',
+    type: '3-х осный',
+    priceSum: '655 989 417 сум', // Taxminiy bozor narxi (~4 000 000 ₽)
+    priceUsd: 54814,             // Rubl -> USD o'rtacha kursda
+    priceR: 4000000,
+    mass: 6300,
+    volume: 27,                  // 13.6 x 2.48 x 0.8
+    electrical: '24V, полностью светодиодное освещение',
+    braking: 'WABCO / Knorr-Bremse EBS, дисковые тормоза',
+    loadCapacity: '32',
+    dimensions: 'внутр: 13 600 х 2 480 мм; борт: 800 мм',
+    suspension: 'Пневматическая',
+    axleBrand: 'SAF / BPW / Koluman',
+    painting: 'KTL-обработка рамы (окунание в 11 ванн) + роботизированная окраска',
+    tires: '385/65 R22.5 (6+1 шт)',
+    roof: '—',
+    superstructure: 'Стальные борта 800 мм, 10 оцинкованных коников в кассете, цельные поперечины каждые 420 мм, стальной ящик',
+    category: 'flatbed-container',
+    source: 'Koluman',
+    from: 'https://koluman.ru/bortovye-polupricepy'
+  },
+  {
+    id: 'fliegl-flatbed-3',
+    foto: '/fliegl_bort.png', // Rasm nomini moslang
+    brand: 'FLIEGL',
+    type: '3-х осный',
+    priceSum: '737 988 094 сум', // Taxminiy bozor narxi (~4 500 000 ₽)
+    priceUsd: 61666,             // Rubl -> USD o'rtacha kursda
+    priceR: 4500000,
+    mass: 6100,                  // Fliegl o'zining yengil shassisi bilan mashhur
+    volume: 27,                  // Standart o'lchamlar bo'yicha
+    electrical: '24V, многокамерные светодиодные фонари',
+    braking: 'WABCO EBS 2S/2M с системой RSS (антиопрокидывание)',
+    loadCapacity: '32.9',
+    dimensions: 'длина: 13 650 мм; ширина: 2 550 мм; высота бортов: по заказу',
+    suspension: 'Пневматическая (Fliegl Luftfederung)',
+    axleBrand: 'SAF / BPW (дисковые тормоза)',
+    painting: 'KTL-обработка рамы и лакокрасочное покрытие повышенной стойкости',
+    tires: '385/65 R22.5 (Premium brand)',
+    roof: '—',
+    superstructure: 'Возможность телескопирования площадки, алюминиевые или стальные борта разной высоты, передняя стенка повышенной прочности',
+    category: 'flatbed-container',
+    source: 'Fliegl',
+    from: 'https://fliegl.ru/production/platform_trailers.htm'
+  },
+
   {
     id: 1,
     foto: '/uat3os.png',
@@ -987,29 +1205,29 @@ export const TRAILER_DATA: TrailerSpec[] = [
     from: null
   },
 
-  {
-    id: 8,
-    foto: '/wagnermaier.png',
-    brand: 'Wagnermaier',
-    type: '4 осная',
-    priceSum: 'н.д.',
-    priceUsd: null,
-    mass: 7450,
-    volume: '110.3',
-    electrical: '24V EU',
-    braking: 'TSR дисковые',
-    loadCapacity: '40.5 т',
-    dimensions: '16370 мм',
-    suspension: 'ECAS',
-    axleBrand: 'SAF INTRA',
-    painting: 'KTL coating',
-    tires: '385/65R22.5',
-    roof: 'шторный механизм',
-    superstructure: 'WM Lock system',
-    category: 'curtain-4',
-    source: 'Д. Семёнов',
-    from: null
-  },
+  // {
+  //   id: 8,
+  //   foto: '/wagnermaier.png',
+  //   brand: 'Wagnermaier',
+  //   type: '4 осная',
+  //   priceSum: 'н.д.',
+  //   priceUsd: null,
+  //   mass: 7450,
+  //   volume: '110.3',
+  //   electrical: '24V EU',
+  //   braking: 'TSR дисковые',
+  //   loadCapacity: '40.5 т',
+  //   dimensions: '16370 мм',
+  //   suspension: 'ECAS',
+  //   axleBrand: 'SAF INTRA',
+  //   painting: 'KTL coating',
+  //   tires: '385/65R22.5',
+  //   roof: 'шторный механизм',
+  //   superstructure: 'WM Lock system',
+  //   category: 'curtain-4',
+  //   source: 'Д. Семёнов',
+  //   from: null
+  // },
 
   {
     id: 9,
@@ -1090,7 +1308,7 @@ export const TRAILER_DATA: TrailerSpec[] = [
 
   {
     id: 'ref-uat-3',
-    brand: 'UzAuto TRAILER',
+    brand: 'VOLLKRAFT',
     type: '3-х осный',
     foto: '/ref.png',
     priceSum: 'По запросу',
