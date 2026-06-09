@@ -293,11 +293,11 @@ export const MarketShareAnalytics = ({ data2025, data2026 }: MarketShareAnalytic
 
   return (
     <div className="mb-12 print:m-0 print:p-0">
-      <FadeIn className="mb-4 print:mb-2">
+      {/* <FadeIn className="mb-4 print:mb-2">
         <h3 className="font-black text-[#1E3A5F] tracking-tighter uppercase text-xl print:text-base print:text-center">
           Анализ рынка полуприцепов (3-х и 4-х осных)
         </h3>
-      </FadeIn>
+      </FadeIn> */}
 
       {/* PECHATDA: Grafiklar tepada yonma-yon turadi, jadval esa pastda to'liq kenglikda */}
       <div className="flex flex-col lg:flex-row gap-6 print:block">
