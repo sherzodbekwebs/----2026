@@ -4,7 +4,7 @@ export const CATEGORIES: Category[] = [
   { id: 'curtain-3', label: 'Шторный полуприцеп 3 осный' },
   { id: 'curtain-4', label: 'Шторный полуприцеп 4 осный' },
   { id: 'container-4', label: 'Контейнеровоз 4-осный' },
-  { id: 'flatbed-container', label: 'Бортовой полуприцеп' }, // Yangi kategoriya
+  { id: 'flatbed-container', label: 'Бортовой полуприцеп 3 осный' },
   { id: 'reefer-3', label: 'Полуприцеп рефрижератор 3 осный' },
 ];
 
@@ -230,11 +230,11 @@ export const TRAILER_DATA: TrailerSpec[] = [
   {
     id: 1,
     foto: '/uat3os.png',
-    brand: 'VOLLKRAFT',
+    brand: 'VOLLKRAFT ',
     type: '3 осный',
-    priceSum: '504 000 000 сум',
-    priceUsd: 41410,
-    priceR: 3109958,
+    priceSum: '585 700 151 сум (бизнес ростар)',
+    priceUsd: 48940,
+    priceR: 3571400,
     mass: 6500,
     volume: 92,
     electrical: '24V (влагозащищенное)',
@@ -524,11 +524,11 @@ export const TRAILER_DATA: TrailerSpec[] = [
   {
     id: 1,
     foto: '/uat4.png',
-    brand: 'VOLLKRAFT',
+    brand: 'VOLLKRAFT (бизнес ростар)',
     type: '4 осный',
-    priceSum: '672 000 000 сум',
-    priceUsd: 55216,
-    priceR: 4146811,
+    priceSum: '742 071 628 сум',
+    priceUsd: 62007,
+    priceR: 4524900,
     mass: 8600,
     volume: 110,
     electrical: '24V (влагозащищенное)',
@@ -841,11 +841,11 @@ export const TRAILER_DATA: TrailerSpec[] = [
   {
     id: 1,
     foto: '/kuat3.png',
-    brand: 'VOLLKRAFT',
+    brand: 'VOLLKRAFT премиум',
     type: '3 осная',
-    priceSum: '352 800 000 сум',
-    priceUsd: 29150,
-    priceR: 2189212,
+    priceSum: '502 045 100 сум',
+    priceUsd: 41950,
+    priceR: 3061300,
     mass: 5500,
     volume: "1x20' (посередине), 2x20', 1x30', 1x40' (включая High-Cube)",
     electrical: '24В, взрывобезопасное исполнение, ISO 3731 / ISO 1185 / ISO 12098',
@@ -1311,9 +1311,9 @@ export const TRAILER_DATA: TrailerSpec[] = [
     brand: 'VOLLKRAFT',
     type: '3-х осный',
     foto: '/ref.png',
-    priceSum: 'По запросу',
-    priceUsd: null,
-    priceR: null,
+    priceSum: '1 060 062 498 сум',
+    priceUsd: 88578,
+    priceR: 6463900,
     mass: 8380,
     volume: 87,
     electrical: '24 В, ISO розетки (2×7-pin + 15-pin), ABS/EBS',
@@ -1497,6 +1497,6 @@ export const TRAILER_DATA: TrailerSpec[] = [
     superstructure: 'Carrier Vector 1550 + паллетный ящик',
     category: 'reefer-3',
     source: 'Д. Семёнов',
-    from: null
+    from: 'https://kaile-rus.ru/shtornyj-polupritsep-13-6-m-3-osi/'
   }
 ];
