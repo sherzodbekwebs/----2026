@@ -465,7 +465,7 @@ export const TRAILER_DATA: TrailerSpec[] = [
     superstructure: 'Передняя стенка алюминий/сталь, задние распашные ворота',
     category: 'curtain-3',
     source: 'Д. Семёнов',
-    from: null
+    from: 'https://ru.cimcvehiclestsingtao.com/'
   },
   {
     id: 11,
@@ -884,7 +884,7 @@ export const TRAILER_DATA: TrailerSpec[] = [
     superstructure: 'Платформа для перевозки контейнеров',
     category: 'container-3',
     source: 'Д. Семёнов',
-    from: null
+    from: 'https://tonar.info/catalog'
   },
   {
     id: 4,
@@ -980,7 +980,7 @@ export const TRAILER_DATA: TrailerSpec[] = [
     superstructure: 'Выдвижная рама (тип 1 и тип 2)',
     category: 'container-3',
     source: 'Д. Семёнов',
-    from: null
+    from: 'https://www.fliegl.ru/production.htm'
   },
   {
     id: 8,
@@ -1028,7 +1028,7 @@ export const TRAILER_DATA: TrailerSpec[] = [
     superstructure: 'Ниши для колес (100 мм), съемные трапы, алюм. борта (400 мм)',
     category: 'container-3',
     source: 'Д. Семёнов',
-    from: null
+    from: 'https://guttrailer.com/'
   },
 
 
@@ -1055,7 +1055,7 @@ export const TRAILER_DATA: TrailerSpec[] = [
     superstructure: '12 фитинговых замков LAXO, 6 усиленных балок',
     category: 'container-4',
     source: 'Д. Семёнов',
-    from: null
+    from: 'https://guttrailer.com/trailer_type/kontejnerovozy/'
   },
 
   {
@@ -1080,7 +1080,7 @@ export const TRAILER_DATA: TrailerSpec[] = [
     superstructure: 'Фитинговые замки 40ft',
     category: 'container-4',
     source: 'Д. Семёнов',
-    from: null
+    from: 'https://tonar.info/catalog/polupricepy-kontejnerovozy'
   },
 
   {
@@ -1152,7 +1152,7 @@ export const TRAILER_DATA: TrailerSpec[] = [
     superstructure: 'JOST замки',
     category: 'container-4',
     source: 'Д. Семёнов',
-    from: null
+    from: 'https://orthausrus.ru/product/konteyner/'
   },
 
   {
@@ -1177,7 +1177,7 @@ export const TRAILER_DATA: TrailerSpec[] = [
     superstructure: 'S700 рама',
     category: 'container-4',
     source: 'Д. Семёнов',
-    from: null
+    from: 'https://koluman.ru/polupriczepy-kontejnerovozy'
   },
 
   {
@@ -1202,7 +1202,7 @@ export const TRAILER_DATA: TrailerSpec[] = [
     superstructure: '12 фитинговых замков',
     category: 'container-4',
     source: 'Д. Семёнов',
-    from: null
+    from: 'https://grunwald.ru/en/production/container-chassis/'
   },
 
   // {
@@ -1301,7 +1301,7 @@ export const TRAILER_DATA: TrailerSpec[] = [
     superstructure: '6 ISO locks',
     category: 'container-4',
     source: 'Д. Семёнов',
-    from: null
+    from: 'https://guttrailer.com/'
   },
 
 
@@ -1350,7 +1350,7 @@ export const TRAILER_DATA: TrailerSpec[] = [
     superstructure: 'Изотермический кузов + ХОУ',
     category: 'reefer-3',
     source: 'Д. Семёнов',
-    from: null
+    from: 'https://tonar.info/catalog'
   },
   // {
   //   id: 'ref-bonum-3',
@@ -1382,7 +1382,7 @@ export const TRAILER_DATA: TrailerSpec[] = [
     superstructure: 'Сэндвич-панели + телематика KRONE',
     category: 'reefer-3',
     source: 'Д. Семёнов',
-    from: null
+    from: 'https://www.krone-trailer.com/en/products/refrigerated-semi-trailer/cool-liner/'
   },
   {
     id: 'ref-orthaus-3',
@@ -1405,7 +1405,7 @@ export const TRAILER_DATA: TrailerSpec[] = [
     superstructure: 'Сэндвич-панели (под ХОУ)',
     category: 'reefer-3',
     source: 'Д. Семёнов',
-    from: null
+    from: 'https://orthausrus.ru/product/shtornobort/'
   },
   {
     id: 'ref-grunwald-3',
@@ -1428,7 +1428,7 @@ export const TRAILER_DATA: TrailerSpec[] = [
     superstructure: 'Сэндвич (стеклопластик + XPS)',
     category: 'reefer-3',
     source: 'Д. Семёнов',
-    from: null
+    from: 'https://grunwald.ru/production/magistralnye/'
   },
   {
     id: 'ref-fliegl-3',
@@ -1451,7 +1451,7 @@ export const TRAILER_DATA: TrailerSpec[] = [
     superstructure: 'ХОУ (Carrier / Thermo King)',
     category: 'reefer-3',
     source: 'Д. Семёнов',
-    from: null
+    from: 'https://www.fliegl.ru/production/curtains_tilts_semi-trailers_including_the_customs_performance.htm'
   },
   {
     id: 'ref-cimc-3',
